@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="Rails staff-hacker: development" uuid="e589d5fd-86a0-49b1-b9d8-345dd9cc31fe">
+      <first-sync>true</first-sync>
+      <user-name>&lt;%= ENV['STAFF_HACKER_USER'] %&gt;</user-name>
+      <user-password>df96df8fdf97df8adfefdfe4dffcdff1df8ddff9dffedfebdfecdfecdff5dfe2dfebdfe9dfe1dfefdff8dff5dffadfebdff9dff9dffddfe5dff8dfeedf8ddff7df8adf8fdf94</user-password>
+    </data-source>
+    <data-source name="Rails staff-hacker: test" uuid="d484baa2-544e-4476-a0e6-9b68908cdad4">
+      <first-sync>true</first-sync>
+      <user-name>&lt;%= ENV['STAFF_HACKER_USER'] %&gt;</user-name>
+      <user-password>df96df8fdf97df8adfefdfe4dffcdff1df8ddff9dffedfebdfecdfecdff5dfe2dfebdfe9dfe1dfefdff8dff5dffadfebdff9dff9dffddfe5dff8dfeedf8ddff7df8adf8fdf94</user-password>
+    </data-source>
+    <data-source name="Rails staff-hacker: production" uuid="c685fd10-508c-4915-a63b-e7c06cd697da">
+      <first-sync>true</first-sync>
+      <user-name>staff-hacker</user-name>
+      <user-password>df96df8fdf97df8adfefdfe4dffcdff1df8ddff9dffedfebdfecdfecdf87dfe2dfebdfe9dfe1dfefdff8dff5dfeedfebdffedfebdfe8dfebdff9dfefdff5dffadfebdff9dff9dffddfe5dff8dfeedf8ddff7df8adf8fdf94</user-password>
+    </data-source>
+  </component>
+</project>

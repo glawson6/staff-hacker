@@ -1,16 +1,9 @@
 source 'https://rubygems.org'
-
-
+ruby "2.1.2"
 gem 'rails', '4.2.0'
-
 gem 'rails-api'
-
 gem 'spring', :group => :development
-
-
 gem 'pg'
-
-
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
