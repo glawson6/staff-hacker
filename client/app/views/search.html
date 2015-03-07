@@ -1,1 +1,8 @@
 <h1>This is the search page.</h1>
+<form ng-submit="findRecruiter()">
+  <label>Find Recruiters</label>
+  <input placeholder="Name"
+         type="text"
+         ng-model="name" autofocus>
+  <button class="btn"  ng-click="findRecruiter()">Submit</button>
+</form>

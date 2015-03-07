@@ -30,7 +30,7 @@ angular
       })
       .when('/signin', {
         templateUrl: 'views/signin.html',
-        controller: 'AboutCtrl'
+        controller: 'AuthCtrl'
       })
       .when('/signup', {
         templateUrl: 'views/signup.html',
@@ -38,7 +38,7 @@ angular
       })
       .when('/search', {
         templateUrl: 'views/search.html',
-        controller: 'AboutCtrl'
+        controller: 'SearchCtrl'
       })
       .when('/recruiter-rating', {
         templateUrl: 'views/recruiter-rating.html',
