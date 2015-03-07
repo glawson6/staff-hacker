@@ -1,6 +1,10 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :update, :destroy]
 
+  before_action :signed_in_user,  only: [:edit, :update, :destroy, :show]
+  before_action :correct_user,    only: [:edit, :update, :destroy]
+  before_action :redirect_if_signed_in, only: [:new, :create]
+
   # GET /users
   # GET /users.json
   def index

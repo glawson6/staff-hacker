@@ -1,1 +1,15 @@
 <h1>This is the signin page.</h1>
+
+<form>
+  <label>Login:</label>
+
+  <input placeholder="Email"
+         type="text"
+         ng-model="email" autofocus>
+
+  <input placeholder="Password"
+         type="password"
+         ng-model="password">
+  <button class="btn"  ng-click="logUserIn()">Submit</button>
+
+</form>
