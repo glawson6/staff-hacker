@@ -1,11 +1,19 @@
 Rails.application.routes.draw do
 
-  resources :users, except: [:new, :edit]
+
   scope '/api' do
       resources :companies, except: [:new, :edit]
       resources :recruiters, except: [:new, :edit]
       resources :ratings, except: [:new, :edit]
-    end
+      resources :users, except: [:new, :edit]
+      resources :sessions,  only:   [:create]
+      get '/signup',    to: 'users#create'
+      get '/signin',    to: 'sessions#create'
+      post '/signin',    to: 'sessions#create'
+      delete '/signout',   to: 'sessions#destroy'
+      get '/signout',   to: 'sessions#destroy'
+  end
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
