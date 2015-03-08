@@ -9,8 +9,8 @@ Recruiter.destroy_all
 
 
 recruiter = Recruiter.create([
-	{name: 'Carlos', 	email: 'yes@yes.com', password: 'foobar', password_confirmation:'foobar'},
-	{name: 'Oscar', 	email: 'no@no.net', 	password: 'foobar', password_confirmation:'foobar'},
-	{name: 'Felipe', 	email: 'no@no.net', 	password: 'foobar', password_confirmation:'foobar'},
-	{name: 'YO', 			email: 'no@no.com', 	password: 'foobar', password_confirmation:'foobar'}
+	{name: 'Carlos', 	company_id: 'abc'},
+	{name: 'Oscar', 	company_id: 'abc'},
+	{name: 'Felipe', 	company_id: 'abc'},
+	{name: 'YO', 			company_id: 'abc'}
 	])

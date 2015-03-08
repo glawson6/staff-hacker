@@ -4,10 +4,10 @@
 angular.module('staffHackerApp')
   .service('SearchService', function ($http) {
 
-    //this.getGroups = function(){
-    //
-    //  return $http.get('/api/groups');
-    //};
+    // this.getRecruiters = function(recruiter){
+    
+    //  return $http.get('/api/search');
+    // };
     //
     //this.addGroup = function(group){
     //
@@ -22,7 +22,7 @@ angular.module('staffHackerApp')
     //};
 
     this.findRecruiters = function(recruiter) {
-      console.log('Called SearchService.signin with '+JSON.stringify(recruiter));
-      return $http.post('/api/signin', recruiter );
+      console.log('Called SearchService.findRecruiters with '+JSON.stringify(recruiter));
+      return $http.post('/api/search', recruiter );
     };
   });

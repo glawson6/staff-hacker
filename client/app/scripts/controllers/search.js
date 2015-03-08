@@ -13,11 +13,12 @@ angular.module('staffHackerApp')
     console.log('SearchCtrl is alive!');
 
     $scope.findRecruiter = function(){
-      console.log('Called findRecruiter with '+JSON.stringify($scope.name));
+      var recruiter = {recruiter: {name: $scope.recruiterName, companyName: $scope.companyName}};
+      console.log('Called findRecruiter with '+JSON.stringify(recruiter));
 
-      SearchService.findRecruiter($scope.name)
+      SearchService.findRecruiters(recruiter)
         .success(function (data) {
-          $scope.currentUser = data;
+          // $scope.currentUser = data;
           $location.path('/search');
         })
         .error(function () {
