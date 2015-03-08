@@ -5,5 +5,12 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-User.destroy_all
-user = User.create(name: 'staff', email: 'staff@hack.net', password: 'foobar', password_confirmation:'foobar')
+Recruiter.destroy_all
+
+
+recruiter = Recruiter.create([
+	{name: 'Carlos', 	email: 'yes@yes.com', password: 'foobar', password_confirmation:'foobar'},
+	{name: 'Oscar', 	email: 'no@no.net', 	password: 'foobar', password_confirmation:'foobar'},
+	{name: 'Felipe', 	email: 'no@no.net', 	password: 'foobar', password_confirmation:'foobar'},
+	{name: 'YO', 			email: 'no@no.com', 	password: 'foobar', password_confirmation:'foobar'}
+	])
