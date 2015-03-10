@@ -16,15 +16,14 @@ angular.module('staffHackerApp')
       console.log(JSON.stringify($cookies));
       console.log('Called findRecruiter with '+JSON.stringify($scope.recruiterName));
       var user = AuthService.getUser();
-      //$cookies.put('remember_me','uf1GKjmLGY');
-      var recruiter = {name: $scope.recruiterName, remember_token: user?user.remember_token:'c1e77cb64ab36b3436a99e0c96dd3670d1bde77c'};
-      SearchService.findRecruiter(recruiter)
+      var recruiter = {name: $scope.recruiterName, companyName: $scope.companyName, rate: $scope.rate};
+      SearchService.findRecruiters(recruiter,user)
         .success(function (data) {
           $scope.currentUser = data;
           $location.path('/about');
         })
-        .error(function () {
-          alert('Sigin ERROR');
+        .error(function (data) {
+          alert('Sigin ERROR' + data);
         });
     };
 

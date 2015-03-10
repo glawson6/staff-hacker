@@ -21,11 +21,11 @@ angular.module('staffHackerApp')
     //  return $http.delete('/api/groups/'+group.id);
     //}; ({withCredentials: true, ...}).
 
-    this.findRecruiter = function(recruiter) {
-      console.log('Called SearchService.signin with '+JSON.stringify(recruiter));
-      var headers = {remember_token: recruiter.remember_token};
+    this.findRecruiters = function(recruiterSearch,user) {
+      console.log('Called SearchService.signin with '+JSON.stringify(recruiterSearch));
+      var headers = {remember_token: user?user.remember_token:''};
       console.log('In find Recruiter '+JSON.stringify(headers));
-      return $http({withCredentials: true,  url: '/api/searchRecruiters', method: 'POST', data: recruiter,
+      return $http({withCredentials: true,  url: '/api/searchRecruiters', method: 'POST', data: recruiterSearch,
         headers: headers});
     };
 
