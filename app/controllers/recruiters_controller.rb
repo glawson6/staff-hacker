@@ -1,5 +1,7 @@
 class RecruitersController < ApplicationController
+
   before_action :set_recruiter, only: [:show, :update, :destroy]
+  before_action :signed_in_user
 
   # GET /recruiters
   # GET /recruiters.json
@@ -45,6 +47,10 @@ class RecruitersController < ApplicationController
     @recruiter.destroy
 
     head :no_content
+  end
+
+  def search
+    puts 'We are authenticated'
   end
 
   private

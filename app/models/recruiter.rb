@@ -1,4 +1,4 @@
 class Recruiter < ActiveRecord::Base
   has_many :ratings
-  belong_to :company
+  belongs_to :company
 end

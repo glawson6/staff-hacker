@@ -7,11 +7,13 @@ Rails.application.routes.draw do
       resources :ratings, except: [:new, :edit]
       resources :users, except: [:new, :edit]
       resources :sessions,  only:   [:create]
+      post '/searchRecruiters', to: 'recruiters#search'
       get '/signup',    to: 'users#create'
       get '/signin',    to: 'sessions#create'
       post '/signin',    to: 'sessions#create'
       delete '/signout',   to: 'sessions#destroy'
       get '/signout',   to: 'sessions#destroy'
+      post '/signout',   to: 'sessions#destroy'
   end
 
   # The priority is based upon order of creation: first created -> highest priority.
