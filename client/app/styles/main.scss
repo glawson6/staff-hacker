@@ -64,12 +64,36 @@ h6 {
   color: white;
 }
 
+.about {
+  height: 400px;
+  background-color: white;
+}
 
+.services {
+  height: 275px;
+  background-color: #A7B5D2;
+}
+
+.information {
+  background: url(/images/recruiter.jpg) no-repeat center center fixed;
+  height: 700px;
+  position: relative;
+  width: 100%;
+   -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+  background-size: cover;
+}
+
+.information .panel {
+  opacity: 0.85;
+  margin-top: 150px;
+}
 
 .footer {
   padding: 55px 0;
   bottom: 0;
-  background-color: gray;
+  background-color: white;
 }
 
 
