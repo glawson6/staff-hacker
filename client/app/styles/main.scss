@@ -64,8 +64,6 @@ h6 {
   color: white;
 }
 
-
-
 .footer {
   padding: 55px 0;
   bottom: 0;
@@ -74,4 +72,27 @@ h6 {
 
 
 
-  
+
+
+
+/*SIGN IN PAGE*/
+
+.form-signin {
+  position: relative;
+  height: auto;
+  padding: 10px;
+  font-size: 16px;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.form-control {
+  width: 300px;
+  height: 44px;
+}
+
+.btn-primary {
+  width: 300px;
+  height: 44px;
+}
+
