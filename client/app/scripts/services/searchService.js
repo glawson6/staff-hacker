@@ -4,6 +4,10 @@
 angular.module('staffHackerApp')
   .service('SearchService', function ($http) {
 
+  // this.getRecruiters = function() {
+  //   return $http.get('/api/search');
+  // };
+
     // this.getRecruiters = function(recruiter){
     
     //  return $http.get('/api/search');

@@ -5,12 +5,21 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
 Recruiter.destroy_all
+Company.destroy_all
 
+company1 = Company.create!(
+  { name: 'General Assembly', website: 'www.generalassemb.ly' }
+)
 
-recruiter = Recruiter.create([
-	{name: 'Carlos', 	company_id: 'abc'},
-	{name: 'Oscar', 	company_id: 'abc'},
-	{name: 'Felipe', 	company_id: 'abc'},
-	{name: 'YO', 			company_id: 'abc'}
-	])
+company2 = Company.create!(
+  { name: 'The Iron Yard', website: 'www.theironyard.com' }
+)
+
+john = Recruiter.create!([
+  { name: 'John',  company_id: company1.id },
+  { name: 'Oscar', company_id: company1.id },
+  { name: 'Ethan', company_id: company2.id },
+  { name: 'Raven', company_id: company2.id }
+])

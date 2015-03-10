@@ -9,11 +9,10 @@ class RecruitersController < ApplicationController
     render json: @recruiters
   end
 
-  def search
-    puts "this is recruiter name: #{params[:recruiter][:name]}"
+  def search   
     @recruiter = Recruiter.find_by(name: params[:recruiter][:name])
 
-    render json: @recruiter
+    render json: {name: @recruiter.name, company_name: @recruiter.company.name, website: @recruiter.company.website}
   end
 
   # GET /recruiters/1

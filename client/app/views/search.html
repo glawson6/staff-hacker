@@ -1,11 +1,24 @@
 <h1>This is the search page.</h1>
+
 <form ng-submit="findRecruiter()">
-  <label>Find Recruiters</label>
-  <input placeholder="Name"
-         type="text"
-         ng-model="recruiterName" autofocus></input>
-         <input placeholder="Company Name"
-         type="text"
-         ng-model="companyName"></input>
+  <label>Find Your Recruiter</label>
+	  <input placeholder="Name"
+	         type="text"
+	         ng-model="recruiterName" autofocus>
+	         </input>
+	  <input placeholder="Company Name"
+	         type="text"
+	         ng-model="companyName">
+	  			</input>
   <button class="btn"  ng-click="findRecruiter()">Submit</button>
 </form>
+
+<br>
+
+<div>
+	 <h3 ng-model="recruiterName">{{ recruiter.name }}</h3> 
+	 <h5 ng-model="companyName"> 	{{ recruiter.company_name }}</h5><h5 ng-model="companyWebsite"> {{ recruiter.website }}</h5>                           
+</div>
+
+
+

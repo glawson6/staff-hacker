@@ -1,1 +1,9 @@
 <h1>This is the recruiter results page.</h1>
+
+<div>
+  <ul>
+    <li ng-repeat="recruiter in recruiters">
+      <span editable-text="recruiterName.name">{{ recruiter }}</span>
+    </li>
+  </ul>
+</div>

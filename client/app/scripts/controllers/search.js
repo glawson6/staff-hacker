@@ -13,17 +13,17 @@ angular.module('staffHackerApp')
     console.log('SearchCtrl is alive!');
 
     $scope.findRecruiter = function(){
-      var recruiter = {recruiter: {name: $scope.recruiterName, companyName: $scope.companyName}};
+      var recruiter = {recruiter: {name: $scope.recruiterName, companyName: $scope.companyName, companyWebsite: $scope.companyWebsite}};
       console.log('Called findRecruiter with '+JSON.stringify(recruiter));
 
       SearchService.findRecruiters(recruiter)
         .success(function (data) {
+          $scope.recruiter = data;
           // $scope.currentUser = data;
           $location.path('/search');
         })
         .error(function () {
-          alert('Sigin ERROR');
+          alert('There was an error while searching for a recruiter!');
         });
     };
-
   });
