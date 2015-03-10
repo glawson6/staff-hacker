@@ -1,4 +1,5 @@
 class SessionsController < ApplicationController
+  before_action :view_headers
   before_action :redirect_if_signed_in, except: [:destroy]
 
   def new
@@ -15,7 +16,8 @@ class SessionsController < ApplicationController
     puts @user
     if @user && @user.authenticate(user_params[:password])
       sign_in @user
-      render json: user_view(@user)
+      puts "response headers => #{response.headers}"
+      render json: @user
     else
       render json: {user: "Invalid Email or Password"}, status: :unprocessable_entity
     end

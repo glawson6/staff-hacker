@@ -19,10 +19,15 @@ angular.module('staffHackerApp')
     //this.destroyGroup = function(group){
     //
     //  return $http.delete('/api/groups/'+group.id);
-    //};
+    //}; ({withCredentials: true, ...}).
 
-    this.findRecruiters = function(recruiter) {
-      console.log('Called SearchService.signin with '+JSON.stringify(recruiter));
-      return $http.post('/api/signin', recruiter );
+    this.findRecruiters = function(recruiterSearch,user) {
+      console.log('Called SearchService.signin with '+JSON.stringify(recruiterSearch));
+      var headers = {remember_token: user?user.remember_token:''};
+      console.log('In find Recruiter '+JSON.stringify(headers));
+      return $http({withCredentials: true,  url: '/api/searchRecruiters', method: 'POST', data: recruiterSearch,
+        headers: headers});
     };
+
+
   });

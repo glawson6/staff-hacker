@@ -8,20 +8,22 @@
  * Controller of the staffHackerApp
  */
 angular.module('staffHackerApp')
-  .controller('SearchCtrl', function ($scope,$location, SearchService) {
+  .controller('SearchCtrl', function ($scope,$location,$cookies, SearchService, AuthService) {
 
     console.log('SearchCtrl is alive!');
 
     $scope.findRecruiter = function(){
-      console.log('Called findRecruiter with '+JSON.stringify($scope.name));
-
-      SearchService.findRecruiter($scope.name)
+      console.log(JSON.stringify($cookies));
+      console.log('Called findRecruiter with '+JSON.stringify($scope.recruiterName));
+      var user = AuthService.getUser();
+      var recruiter = {name: $scope.recruiterName, companyName: $scope.companyName, rate: $scope.rate};
+      SearchService.findRecruiters(recruiter,user)
         .success(function (data) {
           $scope.currentUser = data;
-          $location.path('/search');
+          $location.path('/about');
         })
-        .error(function () {
-          alert('Sigin ERROR');
+        .error(function (data) {
+          alert('Sigin ERROR' + data);
         });
     };
 
