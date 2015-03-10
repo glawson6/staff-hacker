@@ -20,6 +20,6 @@ company2 = Company.create!(
 john = Recruiter.create!([
   { name: 'John',  company_id: company1.id },
   { name: 'Oscar', company_id: company1.id },
-  { name: 'Ethan', company_id: company2.id },
+  { name: 'John', company_id: company2.id },
   { name: 'Raven', company_id: company2.id }
 ])
