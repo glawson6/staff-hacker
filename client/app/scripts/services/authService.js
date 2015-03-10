@@ -25,4 +25,12 @@ angular.module('staffHackerApp')
       console.log('Called AuthService.signin with '+JSON.stringify(user));
       return $http.post('/api/signin', user );
     };
+
+    this.setUser = function(user){
+      this.user = user;
+    };
+
+    this.getUser = function(){
+      return this.user;
+    };
   });

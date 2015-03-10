@@ -1,6 +1,7 @@
 class CompaniesController < ApplicationController
   before_action :set_company, only: [:show, :update, :destroy]
 
+  before_action :signed_in_user
   # GET /companies
   # GET /companies.json
   def index
