@@ -3,28 +3,152 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 @import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
 // endbower
 
-.browsehappy {
-  margin: 0.2em 0;
-  background: #ccc;
-  color: #000;
-  padding: 0.2em 0;
+body,
+html {
+    width: 100%;
+    height: 100%; 
 }
 
-html, body {
-  height: 100%;
-  width: 100%;
-}
 
 body {
   padding: 0;
-  margin-top: 65px;
+  margin-top: 50px;
 }
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 700;
+}
+
+
+nav a {
+  padding-top: 20px !important;
+  padding-bottom: 20px !important;
+  font-size: 18px;
+  transition: all 0.4s ease;
+  
+}
+
+nav .navbar-toggle {
+  margin: 13px 15px 13px 0;
+}
+
+.navbar-brand {
+  font-size: 35px;
+}
+
+
+nav.navbar.shrink {
+  min-height: 35px;
+}
+
+nav.shrink a {
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
+  font-size: 15px;
+}
+
+nav.shrink .navbar-brand {
+  font-size: 25px;
+}
+
+nav.shrink .navbar-toggle {
+  padding: 4px 5px;
+  margin: 8px 15px 8px 0;
+}
+
+.text-center h1 {
+  font-size: 5.5em;
+  margin: 0;
+  padding: 0;
+  color: white;
+  margin-top: 150px;
+}
+
+.text-center h3 {
+  color: #D0D0D0;
+  margin-bottom: 7px;
+}
+
+#home {
+   background: url(/images/tech_meet.jpg) no-repeat center center fixed;
+   background-size: cover;
+   position: relative;
+   width: 100%;
+   display: table;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    height: 600px;
+}
+
+.fa-star {
+  color: white;
+}
+
+
+.about {
+  height: 400px;
+  background-color: white;
+}
+
+.services {
+  height: 275px;
+  background-color: #A7B5D2;
+}
+
+.information {
+  background: url(/images/recruiter.jpg) no-repeat center center fixed;
+  height: 700px;
+  position: relative;
+  width: 100%;
+   -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+  background-size: cover;
+}
+
+.information .panel {
+  opacity: 0.85;
+  margin-top: 150px;
+}
+
 
 .footer {
-  padding: 50px 0;
+  padding: 55px 0;
   bottom: 0;
+  background-color: white;
+}
+
+
+/*SIGN IN PAGE*/
+
+.form-signin {
+  position: relative;
+  height: auto;
+  padding: 10px;
+  font-size: 16px;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.form-control {
+  width: 600px;
+  height: 40px;
+}
+
+.btn-primary {
+  width: 300px;
+  height: 44px;
 }
 
 
 
-  
+
+

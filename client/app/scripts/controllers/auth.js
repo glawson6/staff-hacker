@@ -8,7 +8,7 @@
  * Controller of the staffHackerApp
  */
 angular.module('staffHackerApp')
-  .controller('AuthCtrl', function ($scope,$location, AuthService) {
+  .controller('AuthCtrl', function ($scope,$cookies,$location, AuthService,Nav) {
 
     console.log('AuthCtrl is alive!');
 
@@ -18,11 +18,16 @@ angular.module('staffHackerApp')
       AuthService.signin(user)
         .success(function (data) {
           $scope.currentUser = data;
+          AuthService.setUser($scope.currentUser);
+          Nav.signIn();
+
+          console.log('Nav => '+JSON.stringify(Nav.toArray()));
           $location.path('/search');
       })
         .error(function () {
           alert('Sigin ERROR');
         });
+
     }
 
     $scope.logUserIn = logUserIn;

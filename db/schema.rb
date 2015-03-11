@@ -11,7 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20150311150010) do
+=======
+ActiveRecord::Schema.define(version: 20150306000114) do
+>>>>>>> master
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -26,10 +30,15 @@ ActiveRecord::Schema.define(version: 20150311150010) do
   create_table "ratings", force: :cascade do |t|
     t.string   "comments"
     t.integer  "rate"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
     t.integer  "recruiter_id"
     t.integer  "user_id"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+<<<<<<< HEAD
+    t.integer  "recruiter_id"
+    t.integer  "user_id"
+=======
+>>>>>>> master
   end
 
   create_table "recruiters", force: :cascade do |t|
@@ -44,9 +53,9 @@ ActiveRecord::Schema.define(version: 20150311150010) do
     t.string   "name"
     t.string   "email"
     t.string   "password_digest"
+    t.string   "remember_token"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
-    t.integer  "ratings_id"
   end
 
 end

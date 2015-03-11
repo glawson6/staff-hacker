@@ -1,8 +1,9 @@
-<h1>This is the search page.</h1>
-<form ng-submit="findRecruiter()">
-  <label>Find Recruiters</label>
-  <input placeholder="Name"
-         type="text"
-         ng-model="name" autofocus>
-  <button class="btn"  ng-click="findRecruiter()">Submit</button>
-</form>
+<div class="container">
+	<center>
+		<form class="navbar-form" ng-submit="findRecruiter()">
+		  <h3 class="form-signin-heading">Find Recruiters</h3>
+		  <input placeholder="Name" type="text" class="form-control" ng-model="recruiterName" autofocus="">
+		  <button class="btn btn-lg btn-success" ng-click="findRecruiter()">Search</button>
+		</form>
+	</center>
+</div>

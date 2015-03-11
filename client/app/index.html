@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js">
+<html>
   <head>
     <meta charset="utf-8">
     <title></title>
@@ -12,6 +12,7 @@
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <!-- endbuild -->
   </head>
   <body ng-app="staffHackerApp">
@@ -22,45 +23,53 @@
     <!-- Add your site or application content here -->
 
   <!--   <div class="header"> -->
-    <nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation">
+    <nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation" ng-controller="NavCtrl">
       <div class="container topnav">
         <div class="navbar-header">
-          <a class="navbar-brand topnav" href='#/'>staffHack</a>
+          <a class="navbar-brand topnav" href='#/'>staffHacker</a>
         </div>
-        <div class="collapse navbar-collapse">
+        <div class="nav navbar-nav navbar-right">
+          <ul class="nav navbar-nav navbar-right">
+            <li ng-repeat="tab in navTabs" ng-class="getTabClass(tab);" ng-show="tab.visible">
+              <a ui-sref="{{tab.state}}">{{tab.label}}</a>
+            </li>
+          </ul>
+          <!--
         <ul class="nav navbar-nav navbar-right">
-          <li><a href="#/">Home</a></li>
-          <li><a ng-href="#/about">About</a></li>
-          <li><a ng-href="#/signin">Sign In</a></li>
+          <li><a ui-sref="home">Home</a></li>
+          <li><a ui-sref="about">About</a></li>
+          <li><a ui-sref="signin">Sign In</a></li>
+          <li><a ui-sref="#/signout" ng-click="signOut()">Sign Out</a></li>
         </ul>
+        -->
         </div>
       </div>
     </nav>
  <!--    </div> -->
 
-
-    <div class="container">
-    <div ng-view=""></div>
+    <div>
+    <div ui-view=""></div>
     </div>
 
   <footer class="footer">
     <div class="container">
       <div class="container">
         <div class="row">
-          <div class="col-lg-12">
+          <div class="col-lg-12"  ng-controller="NavCtrl">
             <ul class="list-inline">
-             <li><a href="#/">Home</a></li>
-             <li><a ng-href="#/about">About</a></li>
-             <li><a ng-href="#/signin">Contact</a></li> 
+              <li ng-repeat="tab in navTabs" ng-class="getTabClass(tab);" ng-show="tab.visible">
+                <a ui-sref="{{tab.state}}">{{tab.label}}</a>
+              </li>
             </ul>
-             <p class="copyright text-muted small">Copyright &copy; All Rights Reserved</p>
+             <p class="copyright text-muted small">Copyright staffHacker &copy; All Rights Reserved</p>
           </div>
         </div>
       </div>
     </div>
   </footer>
-  
- 
+
+
+
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
      <script>
@@ -85,6 +94,7 @@
     <script src="bower_components/angular-route/angular-route.js"></script>
     <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
     <script src="bower_components/angular-touch/angular-touch.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -94,9 +104,20 @@
         <script src="scripts/controllers/about.js"></script>
         <script src="scripts/controllers/auth.js"></script>
         <script src="scripts/controllers/home.js"></script>
+        <script src="scripts/controllers/nav.js"></script>
         <script src="scripts/controllers/search.js"></script>
         <script src="scripts/services/authService.js"></script>
         <script src="scripts/services/searchService.js"></script>
         <!-- endbuild -->
+
+  <script>
+    $(window).scroll(function() {
+    if ($(document).scrollTop() > 50) {
+      $('nav').addClass('shrink');
+    } else {
+      $('nav').removeClass('shrink');
+    }
+  });
+  </script>
 </body>
 </html>

@@ -1,5 +1,7 @@
 class RecruitersController < ApplicationController
+
   before_action :set_recruiter, only: [:show, :update, :destroy]
+  before_action :signed_in_user
 
   # GET /recruiters
   # GET /recruiters.json
@@ -45,6 +47,21 @@ class RecruitersController < ApplicationController
     @recruiter.destroy
 
     head :no_content
+  end
+
+  def search
+    puts 'We are authenticated'
+    recruiter_search = params[:search]
+    all_recruiters = []
+    named_recruiters = Recruiter.where(name: recruiter_search[:name]) if recruiter_search[:name]
+    puts "named_recruiters => #{named_recruiters}"
+    named_recruiters.each{|recruiter| all_recruiters << recuiter} if named_recruiters
+    companies = Company.where(name: recruiter_search[:company_name]) if recruiter_search[:company_name]
+    company_recruiters = companies.recruiters if (companies && companies.length > 0)
+    company_recruiters.each{|recruiter| all_recruiters << recuiter} if company_recruiters
+    recruiter_map = all_recruiters.map{|recruiter| {name: recruiter.name, company_name: recruiter.company.name, website: recruiter.company.website}}
+    puts recruiter_map
+    render json: recruiter_map
   end
 
   private

@@ -4,10 +4,7 @@
 # Examples:
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
-
-
-
+#   Mayor.create(name: 'Emanuel', city: cities.first
 
 # User.destroy_all
 # user = User.create(name: 'staff', email: 'staff@hack.net', password: 'foobar', password_confirmation:'foobar')
@@ -606,4 +603,13 @@ recruiters_for_tek_systems = [
 recruiters_for_tek_systems.each do |recruiter|
   tek_systems.recruiters.create(recruiter)
 end
+
+
+Company.destroy_all
+User.destroy_all
+user = User.create(name: 'staff', email: 'staff@hack.net', password: 'foobar', password_confirmation:'foobar')
+
+company = Company.create(name: 'TapTech', website: 'http://taptech.net')
+
+recruiter = company.recruiters.create(name: 'Tap')
 
