@@ -36,7 +36,7 @@ h6 {
 }
 
 .text-center h1 {
-  font-size: 4.5em;
+  font-size: 5.5em;
   margin: 0;
   padding: 0;
   color: white;
@@ -64,15 +64,39 @@ h6 {
   color: white;
 }
 
-.footer {
-  padding: 55px 0;
-  bottom: 0;
-  background-color: gray;
+
+.about {
+  height: 400px;
+  background-color: white;
+}
+
+.services {
+  height: 275px;
+  background-color: #A7B5D2;
+}
+
+.information {
+  background: url(/images/recruiter.jpg) no-repeat center center fixed;
+  height: 700px;
+  position: relative;
+  width: 100%;
+   -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+  background-size: cover;
+}
+
+.information .panel {
+  opacity: 0.85;
+  margin-top: 150px;
 }
 
 
-
-
+.footer {
+  padding: 55px 0;
+  bottom: 0;
+  background-color: white;
+}
 
 
 /*SIGN IN PAGE*/
