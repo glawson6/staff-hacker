@@ -8,7 +8,7 @@
  * Controller of the staffHackerApp
  */
 angular.module('staffHackerApp')
-  .controller('NavCtrl', function ($scope, $state,AuthService,Nav) {
+  .controller('NavCtrl', function ($scope,$rootScope, $state,AuthService,Nav) {
     console.log('NavCtrl is alive!!!! with Nav '+JSON.stringify(Nav));
    $scope.signOut = function(){
     AuthService.signout();
@@ -37,5 +37,15 @@ angular.module('staffHackerApp')
         }
       });
     });
+
+    $rootScope.$on('$stateChangeStart',
+      function(event, toState, toParams, fromState, fromParams){
+
+        if (_.includes(Nav.securedStates(), toState) && _.isNull(AuthService.getUser())){
+          event.preventDefault();
+        }
+        // transitionTo() promise will be rejected with
+        // a 'transition prevented' error
+      });
 
   });

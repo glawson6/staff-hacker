@@ -161,7 +161,7 @@ recruiters_for_diversant = [
   { first_name: "Nichole",
     last_name: "Bobbitt",
   },
-  { 
+  {
     first_name: "Andrew",
     last_name: "Golden"
   },
@@ -506,7 +506,7 @@ recruiters_for_matrix_resources.each do |recruiter|
 end
 
 recruiters_for_tek_systems = [
-  { 
+  {
   first_name: "Doug",
   last_name: "Cole"
   },
@@ -586,7 +586,7 @@ recruiters_for_tek_systems = [
   first_name: "Brian",
   last_name: "Mack"
   },
-  {                                                                                                                                                                                                                                                              
+  {
   first_name: "Chris",
   last_name: "Williams"
   },
@@ -604,12 +604,13 @@ recruiters_for_tek_systems.each do |recruiter|
   tek_systems.recruiters.create(recruiter)
 end
 
-
-Company.destroy_all
 User.destroy_all
 user = User.create(name: 'staff', email: 'staff@hack.net', password: 'foobar', password_confirmation:'foobar')
 
 company = Company.create(name: 'TapTech', website: 'http://taptech.net')
 
-recruiter = company.recruiters.create(name: 'Tap')
+recruiter = company.recruiters.create(first_name: 'Tap',last_name: 'That')
+(0..5).each do |i|
+  recruiter.ratings.create(rate: i, comments: "A #{i} comment", user: user)
+end
 

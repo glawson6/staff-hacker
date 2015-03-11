@@ -1,6 +1,6 @@
 class SessionsController < ApplicationController
   before_action :view_headers
-  before_action :redirect_if_signed_in, except: [:destroy]
+  before_action :redirect_if_signed_in, except: [:create, :destroy]
 
   def new
     puts 'In SessionsController new'
