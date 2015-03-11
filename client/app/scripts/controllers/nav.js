@@ -8,9 +8,34 @@
  * Controller of the staffHackerApp
  */
 angular.module('staffHackerApp')
-  .controller('NavCtrl', function ($scope, AuthService) {
-    console.log('NavCtrl is alive!!!!');
+  .controller('NavCtrl', function ($scope, $state,AuthService,Nav) {
+    console.log('NavCtrl is alive!!!! with Nav '+JSON.stringify(Nav));
    $scope.signOut = function(){
     AuthService.signout();
+     Nav.signOut();
    };
+
+    $scope.navTabs = Nav.toArray();
+    console.log('$scope.navTabs => '+JSON.stringify($scope.navTabs));
+
+    $scope.getTabClass = function(tab) {
+      return tab.active ? 'active' : '';
+    };
+
+    $scope.active = function(state) {
+      return $state.is(state);
+    };
+
+    $scope.$on('$stateChangeSuccess', function() {
+      console.log('stateChange');
+      $scope.navTabs.forEach(function(tab) {
+        tab.active = $scope.active(tab.state);
+        //console.log('tab.state => '+tab.state+" tab.active => "+tab.active);
+        if (tab.active === true && tab.state === Nav.signout.state){
+          console.log('Resolved to tab.state => '+tab.state);
+          Nav.signOut();
+        }
+      });
+    });
+
   });
