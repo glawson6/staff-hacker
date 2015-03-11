@@ -23,13 +23,14 @@ class UsersController < ApplicationController
   # POST /users.json
   def create
     @user = User.new(user_params)
-
     if @user.save
+      sign_in @user
       render json: @user, status: :created, location: @user
     else
       render json: @user.errors, status: :unprocessable_entity
     end
   end
+
 
   # PATCH/PUT /users/1
   # PATCH/PUT /users/1.json
@@ -61,4 +62,7 @@ class UsersController < ApplicationController
       params.require(:user).permit(:name, :email, :password_digest)
     end
 end
+def user_params
+      params.require(:user).permit(:name, :email, :password, :password_confirmation)
+    end
 

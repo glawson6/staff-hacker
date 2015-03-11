@@ -36,4 +36,22 @@ angular.module('staffHackerApp')
 
     };
 
+    $scope.signUserUp = function() {
+      var user = {user: {email:$scope.email, password: $scope.password}};
+      console.log('Called logUserIn with '+JSON.stringify(user));
+      AuthService.signup(user)
+        .success(function (data) {
+          $scope.currentUser = data;
+          AuthService.setUser($scope.currentUser);
+          Nav.signUp();
+
+          console.log('Nav => '+JSON.stringify(Nav.toArray()));
+          $location.path('/search');
+      })
+        .error(function () {
+          alert('Sigup ERROR');
+        });
+
+    }
+
   });

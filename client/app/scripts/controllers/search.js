@@ -23,7 +23,7 @@ angular.module('staffHackerApp')
           $location.path('/about');
         })
         .error(function (data) {
-          alert('Sigin ERROR' + data);
+          alert('Sigin ERROR' + data);z
         });
     };
 
