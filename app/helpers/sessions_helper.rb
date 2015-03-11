@@ -34,7 +34,8 @@ module SessionsHelper
 
   def current_user_token(token)
     remember_token = User.digest(token)
-    @current_user ||= User.find_by(remember_token: token)
+    @current_user = User.find_by(remember_token: token) if token
+    @current_user
   end
 
   def current_user?(user)
@@ -43,7 +44,12 @@ module SessionsHelper
 
   def redirect_if_signed_in
     #redirect_to(root_path) if signed_in?
-    render json: current_user if signed_in?
+    if signed_in?
+      puts "Are we signed in?"
+      render json: current_user
+    else
+      render json: {user: "Invalid Email or Password"}, status: :unprocessable_entity
+    end
   end
 
   def redirect_back_or(default)
