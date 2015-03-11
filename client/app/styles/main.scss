@@ -148,7 +148,13 @@ nav.shrink .navbar-toggle {
   height: 44px;
 }
 
+input {
+  margin-bottom: 10px;
+}
 
-
-
+section {
+  -webkit-animation-delay: 1s;
+   -moz-animation-delay: 1s;
+    -o-animation-delay: 1s;
+}
 
