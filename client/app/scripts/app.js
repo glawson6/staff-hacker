@@ -108,7 +108,7 @@ angular
       .state(NavProvider.navTabs.signup.state, {
         url: '/signup',
         templateUrl: 'views/signup.html',
-        controller: 'AboutCtrl'
+        controller: 'AuthCtrl'
       })
       .state(NavProvider.navTabs.signin.state, {
         url: '/signin',
