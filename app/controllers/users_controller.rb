@@ -3,7 +3,7 @@ class UsersController < ApplicationController
 
   before_action :signed_in_user,  only: [:edit, :update, :destroy, :show]
   before_action :correct_user,    only: [:edit, :update, :destroy]
-  before_action :redirect_if_signed_in, only: [:new, :create]
+  before_action :redirect_if_signed_in, only: [:new]
 
   # GET /users
   # GET /users.json
@@ -59,10 +59,8 @@ class UsersController < ApplicationController
     end
 
     def user_params
-      params.require(:user).permit(:name, :email, :password_digest)
-    end
-end
-def user_params
       params.require(:user).permit(:name, :email, :password, :password_confirmation)
     end
+end
+    
 
