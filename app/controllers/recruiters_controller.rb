@@ -13,8 +13,13 @@ class RecruitersController < ApplicationController
 
   # GET /recruiters/1
   # GET /recruiters/1.json
+  # t.string   "first_name"
+  # t.string   "last_name"
+  # t.integer  "company_id"
+  # t.string   "image_url"
   def show
-    render json: @recruiter
+
+   # render json: @recruiter{:first_name @recruiter.first_name,  :last_name @}
   end
 
   # POST /recruiters
@@ -51,17 +56,18 @@ class RecruitersController < ApplicationController
 
   def search
     puts 'We are authenticated'
-    recruiter_search = params[:search]
-    all_recruiters = []
-    named_recruiters = Recruiter.where(name: recruiter_search[:name]) if recruiter_search[:name]
-    puts "named_recruiters => #{named_recruiters}"
-    named_recruiters.each{|recruiter| all_recruiters << recuiter} if named_recruiters
-    companies = Company.where(name: recruiter_search[:company_name]) if recruiter_search[:company_name]
-    company_recruiters = companies.recruiters if (companies && companies.length > 0)
-    company_recruiters.each{|recruiter| all_recruiters << recuiter} if company_recruiters
-    recruiter_map = all_recruiters.map{|recruiter| {name: recruiter.name, company_name: recruiter.company.name, website: recruiter.company.website}}
-    puts recruiter_map
-    render json: recruiter_map
+    # recruiter_search = params[:search]
+    # all_recruiters = []
+    # named_recruiters = Recruiter.where(name: recruiter_search[:name]) if recruiter_search[:name]
+    # puts "named_recruiters => #{named_recruiters}"
+    # named_recruiters.each{|recruiter| all_recruiters << recuiter} if named_recruiters
+    # companies = Company.where(name: recruiter_search[:company_name]) if recruiter_search[:company_name]
+    # company_recruiters = companies.recruiters if (companies && companies.length > 0)
+    # company_recruiters.each{|recruiter| all_recruiters << recuiter} if company_recruiters
+    # recruiter_map = all_recruiters.map{|recruiter| {name: recruiter.name, company_name: recruiter.company.name, website: recruiter.company.website}}
+    # puts recruiter_map
+    # render json: recruiter_map
+    render json: Recruiter.all
   end
 
   private

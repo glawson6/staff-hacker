@@ -1,1 +1,31 @@
-<h1>This is the recruiter-rating page.</h1>
+<div class="container form-signin" ng-controller="RecruiterCtrl">
+  <div class="row">
+    <div class="col-md-12">
+    <div class="media">
+      <div class="media-left">
+        <a href="#">
+          <img class="media-object" src="http://lorempixel.com/100/100/people" alt="Some Image">
+        </a>
+      </div>
+      <div class="media-body">
+        <h4 class="media-heading">Joehansen Johnson</h4>
+
+      </div>
+      <form class="">
+        <h2 class="form-signin-heading">Rate</h2>
+
+        <label for="rate" class="sr-only">Email address</label>
+        <input placeholder="Rate"  id="rate" class="form-control" required="" ng-model="rate" autofocus="">
+
+        <label for="comments" class="sr-only">Password</label>
+        <textarea class="form-control" rows="5" id="comments" placeholder="Comments" required="" ng-model="comments"></textarea>
+
+        <button class="btn btn-lg btn-primary btn-block" ng-click="createRating()">Add Rating</button>
+
+      </form>
+      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+
+    </div>
+    </div>
+  </div>
+</div>

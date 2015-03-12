@@ -20,7 +20,6 @@ angular.module('staffHackerApp')
           $scope.currentUser = data;
           AuthService.setUser($scope.currentUser);
           Nav.signIn();
-
           console.log('Nav => '+JSON.stringify(Nav.toArray()));
           $state.go(Nav.search.state);
       })
