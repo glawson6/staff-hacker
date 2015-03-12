@@ -4,7 +4,7 @@
 angular.module('staffHackerApp')
   .service('AuthService', function ($http,UserHolder) {
 
-    this.signUp = function(user) {
+    this.signUp = function(user) { 
       return $http.post('/api/signup', user );
     };
 
