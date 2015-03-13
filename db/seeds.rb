@@ -20,6 +20,7 @@ image_urls =["http://www.easyvectors.com/assets/images/vectors/afbig/6f079da94ff
 "http://images.clipartpanda.com/face-clip-art-lady_face_clip_art_23104.jpg",
 "http://images.clipartpanda.com/scalp-clipart-gas_mask_clip_art_22994.jpg"]
 
+Recruiter.destroy_all
 Company.destroy_all
 
 apex_systems = Company.find_or_create_by({
