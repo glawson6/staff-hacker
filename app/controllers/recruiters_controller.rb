@@ -78,7 +78,7 @@ class RecruitersController < ApplicationController
     # Only add recruiter if it is not in all_recruiter array
     company_recruiters = companies.each{|company| company.recruiters.each{|recruiter| all_recruiters << recruiter unless all_recruiters.include? recruiter}} if companies
     #Create map for JSON output
-    recruiter_map = all_recruiters.map{|recruiter| {id:recruiter.id,image_url: recruiter.image_url,first_name: recruiter.last_name,first_name: recruiter.last_name, company_name: recruiter.company.name, website: recruiter.company.website}}
+    recruiter_map = all_recruiters.map{|recruiter| {id:recruiter.id,image_url: recruiter.image_url,first_name: recruiter.first_name,last_name: recruiter.last_name, company_name: recruiter.company.name, website: recruiter.company.website}}
     puts recruiter_map
 
     render json: recruiter_map
