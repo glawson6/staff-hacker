@@ -29,16 +29,17 @@ angular.module('staffHackerApp')
     $scope.getRecruiter = function(id){
       console.log('Called getRecruiter with '+JSON.stringify(id));
       var user = AuthService.getUser();
-      console.log('Called User with '+JSON.stringify(user));
-      RecruiterService.getRecruiter(id,user)
-        .success(function (data) {
-          $scope.recruiter = data;
-          console.log('Got recruiter '+JSON.stringify($scope.recruiter)+' with id '+$scope.recruiter.id);
-          $state.go(Nav.recruiterRatings.state,{recruiterId: $scope.recruiter.id});
-        })
-        .error(function (data) {
-          alert('getRecruiter ERROR' + data);
-        });
+      console.log('Called AuthService.getUser() got '+JSON.stringify(user));
+      $state.go(Nav.recruiterRatings.state,{recruiterId: id});
+      //RecruiterService.getRecruiter(id,user)
+      //  .success(function (data) {
+      //    $scope.recruiter = data;
+      //    console.log('Got recruiter '+JSON.stringify($scope.recruiter)+' with id '+$scope.recruiter.id);
+      //    $state.go(Nav.recruiterRatings.state,{recruiterId: $scope.recruiter.id});
+      //  })
+      //  .error(function (data) {
+      //    alert('getRecruiter ERROR' + data);
+      //  });
     };
 
     $scope.recruiterResultsState = Nav.recruiterResults.state;
