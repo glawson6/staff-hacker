@@ -1,6 +1,5 @@
 class SessionsController < ApplicationController
   before_action :view_headers
-  before_action :redirect_if_signed_in, except: [:create, :destroy]
 
   def new
     puts 'In SessionsController new'
@@ -24,7 +23,11 @@ class SessionsController < ApplicationController
 
   def destroy
     sign_out
-    render json: {user: "User Logged Out"}
+    render json: {}, status: 204
+  end
+
+  def index
+    render json: current_user_token(resolve_token), status: 200
   end
 
   private

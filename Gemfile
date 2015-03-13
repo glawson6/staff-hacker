@@ -3,6 +3,11 @@ ruby "2.1.2"
 gem 'rails', '4.2.0'
 gem 'rails-api'
 gem 'pg'
+
+gem 'responders', '~> 2.0'
+
+# To use ActiveModel has_secure_password
+gem 'rack-cors', :require => 'rack/cors'
 #gem 'puma'
 
 # To use ActiveModel has_secure_password
