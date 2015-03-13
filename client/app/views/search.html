@@ -8,34 +8,36 @@
 	</center>
 
 <!-- SEARCH RESULTS -->
-	<ul class="media-list">
-	  <li class="media" ng-repeat="recruiter in recruiters">
-	    <div class="media-left">
-	      <a href="#">
-	        <img class="media-object" src="..." alt="...">
-	        
-	      </a>
-	    </div>
-	    <div class="media-body">
-	      <h4 class="media-heading"><span><a href="#" ng-click="getRecruiter(recruiter.id);"
-	               onaftersave="updateGroup(group)">{{ recruiter.first_name }}  {{ recruiter.last_name }}</a></span></h4>
-	               You don't want a hungry dove down your pants. Can't a guy call his mother pretty without it seeming strange? Amen. And how about that little piece of tail on her? Cute! You can control your bladder when you're dead! Did you know that more frozen bananas are sold right here on this boardwalk than anywhere in the OC? Turn this skiff around! Chickens don't clap! Absolutely. And we're going to be here every day. I don't care if it takes from now till the end of Shrimpfest.
-	      
-	    </div>
-	  </li>
-	</ul>
+
+		<ul class="media-list">
+		  <li class="media" ng-repeat="recruiter in recruiters">
+		  	<div class="panel panel-default">
+  				<div class="panel-body">
+				    <div class="media-left">
+				      <a href="#">
+				        <img class="media-object" src="{{ recruiter.image_url }}" ng-click="getRecruiter(recruiter.id)" alt="...">
+				      </a>
+				    </div>
+				    <div class="media-body">
+				      <h3 class="media-heading"><span><a href="#" ng-click="getRecruiter(recruiter.id)"
+				               onaftersave="updateGroup(group)">{{ recruiter.first_name }}  {{ recruiter.last_name }}</a></span></h3>
+				               <h4>{{ recruiter.company_name }}</h4><br>
+				               You don't want a hungry dove down your pants. Can't a guy call his mother pretty without it seeming strange? Amen. And how 
+				               {{ rating.recruiter_id }}
+				      
+				    </div>
+				  </div>
+				</div>	
+		  </li>
+		</ul>
 
 
-
-
-
-
-  <!-- <ul>
-    <li ng-repeat="recruiter in recruiters">
-      <span><a href="#" ng-click="getRecruiter(recruiter.id);"
-               onaftersave="updateGroup(group)">{{ recruiter.first_name }}  {{ recruiter.last_name }}</a></span>
-    </li>
-  </ul> -->
+	  <!-- <ul>
+	    <li ng-repeat="recruiter in recruiters">
+	      <span><a href="#" ng-click="getRecruiter(recruiter.id);"
+	               onaftersave="updateGroup(group)">{{ recruiter.first_name }}  {{ recruiter.last_name }}</a></span>
+	    </li>
+	  </ul> -->
 </div>
 
 
