@@ -20,7 +20,7 @@ angular.module('staffHackerApp')
         Nav.signOut();
       }
     })
-      .error(function(data){
+      .error(function(){
         Nav.signOut();
       });
 

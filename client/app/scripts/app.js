@@ -19,7 +19,6 @@ angular
     'ngTouch'
   ])
   .provider('UserHolder', function () {
-    var user;
     return {
       sanity: function () {
         console.log('UserHolderProvider is alive!');
@@ -126,17 +125,18 @@ angular
       .state(NavProvider.navTabs.recruiterRatings.state, {
         url: '/recruiter-rating/:recruiterId',
         templateUrl: 'views/recruiter-rating.html',
-        controller: 'RecruiterCtrl'
-      })
-      .state('company-results', {
-        url: '/company-results',
-        templateUrl: 'views/company-results.html',
-        controller: 'AboutCtrl'
-      })
-      .state(NavProvider.navTabs.recruiterResults.state, {
-        url: '/recruiter-results',
-        templateUrl: 'views/recruiter-results.html',
-        controller: 'AboutCtrl'
+        controller: 'RecruiterCtrl',
+        onEnter: ['$state', 'AuthService', function($state, AuthService) {
+          AuthService.findSessionUser()
+            .success(function(user){
+              if (!user){
+                $state.go('home');
+              }
+            })
+            .error(function(){
+              $state.go('home');
+            });
+        }]
       })
     .state(NavProvider.navTabs.search.state, {
         url: '/search',
@@ -147,7 +147,7 @@ angular
             .success(function(user){
               if (!user){
                 $state.go('home');
-              } 
+              }
             })
             .error(function(){
               $state.go('home');
