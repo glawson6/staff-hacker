@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8382c1ac-eceb-4986-b577-7545d25ad6ae" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/scripts/app.js" afterPath="$PROJECT_DIR$/client/app/scripts/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/scripts/controllers/nav.js" afterPath="$PROJECT_DIR$/client/app/scripts/controllers/nav.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/scripts/controllers/search.js" afterPath="$PROJECT_DIR$/client/app/scripts/controllers/search.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dev-notes.txt" afterPath="$PROJECT_DIR$/dev-notes.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/staff-hacker.iml" afterPath="$PROJECT_DIR$/.idea/staff-hacker.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="staff-hacker.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -46,16 +48,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="application.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/application.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="78" max-vertical-offset="780">
-              <caret line="43" column="0" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="sessions_helper.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/helpers/sessions_helper.rb">
           <provider selected="true" editor-type-id="text-editor">
@@ -79,17 +71,37 @@
       <file leaf-file-name="Gemfile" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Gemfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="960">
-              <caret line="9" column="40" selection-start-line="9" selection-start-column="40" selection-end-line="9" selection-end-column="40" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="93" max-vertical-offset="960">
+              <caret line="10" column="1" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="search.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="dev-notes.txt" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/dev-notes.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.14018692" vertical-offset="0" max-vertical-offset="642">
+              <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/app/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-65.625" vertical-offset="90" max-vertical-offset="1995">
+              <caret line="111" column="53" selection-start-line="111" selection-start-column="53" selection-end-line="111" selection-end-column="53" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="search.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/app/scripts/controllers/search.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3224299" vertical-offset="138" max-vertical-offset="780">
+            <state vertical-scroll-proportion="0.0" vertical-offset="138" max-vertical-offset="780">
               <caret line="23" column="32" selection-start-line="23" selection-start-column="32" selection-end-line="23" selection-end-column="32" />
               <folding />
             </state>
@@ -109,7 +121,7 @@
       <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/app/scripts/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="285" max-vertical-offset="2475">
+            <state vertical-scroll-proportion="0.0" vertical-offset="1800" max-vertical-offset="2475">
               <caret line="20" column="39" selection-start-line="20" selection-start-column="39" selection-end-line="20" selection-end-column="39" />
               <folding />
             </state>
@@ -136,16 +148,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="routes.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/routes.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="15" max-vertical-offset="1200">
-              <caret line="8" column="50" selection-start-line="8" selection-start-column="50" selection-end-line="8" selection-end-column="50" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="Git.Settings">
@@ -157,7 +159,6 @@
         <option value="$PROJECT_DIR$/client/node_modules/grunt-connect-proxy/Gruntfile.js" />
         <option value="$PROJECT_DIR$/client/Gruntfile.js" />
         <option value="$PROJECT_DIR$/companyAdd.json" />
-        <option value="$PROJECT_DIR$/dev-notes.txt" />
         <option value="$PROJECT_DIR$/client/app/views/signup.html" />
         <option value="$PROJECT_DIR$/client/app/views/company-results.html" />
         <option value="$PROJECT_DIR$/client/app/views/recruiter-results.html" />
@@ -186,7 +187,6 @@
         <option value="$PROJECT_DIR$/app/models/recruiter.rb" />
         <option value="$PROJECT_DIR$/app/controllers/recruiters_controller.rb" />
         <option value="$PROJECT_DIR$/config/application.rb" />
-        <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
         <option value="$PROJECT_DIR$/app/controllers/sessions_controller.rb" />
         <option value="$PROJECT_DIR$/app/helpers/sessions_helper.rb" />
@@ -194,6 +194,8 @@
         <option value="$PROJECT_DIR$/client/app/scripts/app.js" />
         <option value="$PROJECT_DIR$/client/app/scripts/controllers/nav.js" />
         <option value="$PROJECT_DIR$/client/app/scripts/controllers/search.js" />
+        <option value="$PROJECT_DIR$/Gemfile" />
+        <option value="$PROJECT_DIR$/dev-notes.txt" />
       </list>
     </option>
   </component>
@@ -1223,13 +1225,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dev-notes.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="165">
-          <caret line="4" column="60" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="110" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/rating.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="150">
@@ -1319,14 +1314,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/app/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-18.333334" vertical-offset="1225" max-vertical-offset="1995">
-          <caret line="111" column="53" selection-start-line="111" selection-start-column="53" selection-end-line="111" selection-end-column="53" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/app/views/search.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-6.875" vertical-offset="0" max-vertical-offset="315">
@@ -1405,14 +1392,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Gemfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="960">
-          <caret line="9" column="40" selection-start-line="9" selection-start-column="40" selection-end-line="9" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/routes.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="15" max-vertical-offset="1200">
@@ -1453,14 +1432,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/app/scripts/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="285" max-vertical-offset="2475">
-          <caret line="20" column="39" selection-start-line="20" selection-start-column="39" selection-end-line="20" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/app/scripts/controllers/nav.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="378" max-vertical-offset="1080">
@@ -1471,8 +1442,40 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/client/app/scripts/controllers/search.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3224299" vertical-offset="138" max-vertical-offset="780">
+        <state vertical-scroll-proportion="0.0" vertical-offset="138" max-vertical-offset="780">
           <caret line="23" column="32" selection-start-line="23" selection-start-column="32" selection-end-line="23" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/app/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-65.625" vertical-offset="90" max-vertical-offset="1995">
+          <caret line="111" column="53" selection-start-line="111" selection-start-column="53" selection-end-line="111" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gemfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="93" max-vertical-offset="960">
+          <caret line="10" column="1" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/app/scripts/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1800" max-vertical-offset="2475">
+          <caret line="20" column="39" selection-start-line="20" selection-start-column="39" selection-end-line="20" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dev-notes.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.14018692" vertical-offset="0" max-vertical-offset="642">
+          <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
           <folding />
         </state>
       </provider>
