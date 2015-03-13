@@ -33,8 +33,8 @@ angular.module('staffHackerApp')
       RecruiterService.getRecruiter(id,user)
         .success(function (data) {
           $scope.recruiter = data;
-          console.log('Got recruiter '+JSON.stringify($scope.recruiter)+' with id '+$scope.recruiter['id']);
-          $state.go(Nav.recruiterRatings.state,{recruiterId: $scope.recruiter['id']});
+          console.log('Got recruiter '+JSON.stringify($scope.recruiter)+' with id '+$scope.recruiter.id);
+          $state.go(Nav.recruiterRatings.state,{recruiterId: $scope.recruiter.id});
         })
         .error(function (data) {
           alert('getRecruiter ERROR' + data);
