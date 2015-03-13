@@ -4,7 +4,7 @@
 angular.module('staffHackerApp')
   .service('AuthService', function ($http,UserHolder) {
 
-    this.signUp = function(user) { 
+    this.signUp = function(user) {
       return $http.post('/api/signup', user );
     };
 
@@ -16,7 +16,10 @@ angular.module('staffHackerApp')
     this.setUser = function(user){
       console.log('Setting user '+JSON.stringify(user));
       UserHolder.setUser(user);
-      this.user = user;
+    };
+
+    this.isAuthenticated = function(){
+      return !!UserHolder.getUser();
     };
 
     this.getUser = function(){
@@ -27,13 +30,24 @@ angular.module('staffHackerApp')
       return {remember_token: user?user.remember_token:''};
     };
 
+    this.findSessionUser = function(){
+      return $http.get('/api/sessions')
+        .success(function(data){
+          //console.log('findSessionUser data => '+JSON.stringify(data));
+          UserHolder.setUser(data);
+        })
+        .error(function () {
+          alert('ERROR getting current user!');
+        });
+    };
+
     this.signout = function() {
-      console.log('Called AuthService.signout with '+JSON.stringify(this.user));
-      var headers = this.createHeaders(this.user);
+      console.log('Called AuthService.signout with '+JSON.stringify(UserHolder.getUser()));
+      var headers = this.createHeaders(UserHolder.getUser());
       console.log('In signout '+JSON.stringify(headers));
-      var response = $http({withCredentials: true,  url: '/api/signout', method: 'POST', data: UserHolder.getUser(),
+      var response = $http({url: '/api/signout', method: 'POST', data: UserHolder.getUser(),
         headers: headers});
-      this.user = {};
+      UserHolder.setUser({});
       return response;
     };
   });
