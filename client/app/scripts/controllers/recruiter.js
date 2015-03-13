@@ -11,8 +11,9 @@ angular.module('staffHackerApp')
   .controller('RecruiterCtrl', function ($scope,$location,$stateParams,$state,RecruiterService, AuthService,Nav) {
 
     $scope.recruiterId = $stateParams.recruiterId;
+    $scope.recruiter = RecruiterService.getRecruiter($scope.recruiterId,AuthService.getUser());
 
-    console.log('RecruiterCtrl is alive with recruiterId '+$scope.recruiterId+' $stateParams '+JSON.stringify());
+    console.log('RecruiterCtrl is alive with recruiterId '+$scope.recruiterId);
     $scope.createRating = function(){
       console.log('Called createRating with '+JSON.stringify($scope.recruiterName)+' with recruiter id '+$scope.recruiterId);
       var user = AuthService.getUser();

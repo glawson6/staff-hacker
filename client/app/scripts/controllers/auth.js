@@ -28,7 +28,7 @@ angular.module('staffHackerApp')
           alert('Sigup ERROR');
         });
 
-    }
+    };
 
     function logUserIn(){
       var user = {user: {email:$scope.email, password: $scope.password}};
