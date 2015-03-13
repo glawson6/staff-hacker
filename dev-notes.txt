@@ -3,3 +3,6 @@ export STAFF_HACKER_USER=staff-hacker
 export STAFF_HACKER_PASSWORD=staff-hacker
 
 curl -X POST  --header "Content-Type:application/json" -d @companyAdd.json http://localhost:3000/api/companies
+
+more lines
+
