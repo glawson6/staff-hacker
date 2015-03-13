@@ -8,7 +8,7 @@
  * Controller of the staffHackerApp
  */
 angular.module('staffHackerApp')
-  .controller('NavCtrl', function ($scope,$rootScope, $state,AuthService,Nav) {
+  .controller('NavCtrl', function ($scope,$rootScope,$cookies, $state,AuthService,Nav) {
     console.log('NavCtrl is alive!!!! with Nav '+JSON.stringify(Nav));
    $scope.signOut = function(){
     AuthService.signout();

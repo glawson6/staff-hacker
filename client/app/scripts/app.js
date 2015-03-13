@@ -27,7 +27,7 @@ angular
       $get: function () {
         return {
           getUser: function(){
-            return user;
+            return this.user;
           },
           setUser: function(user){
             this.user = user;
@@ -64,7 +64,9 @@ angular
         this.signup.visible = true;
         this.search.visible = false;
         this.signout.visible = false;
-      }
+      },
+      recruiterResults:{state: 'recruiter-results', label: 'Recruiter Results', active: false, visible: false},
+      recruiterRatings:{state: 'recruiter-ratings', label: 'Recruiter Ratings', active: false, visible: false}
     };
 
     return {
@@ -75,14 +77,23 @@ angular
     };
   })
   .config(function ($stateProvider, $urlRouterProvider, NavProvider,UserHolderProvider) {
-    console.log('NavProvider home => ' + JSON.stringify(NavProvider.navTabs.home.label));
-    console.log('NavProvider => ' + JSON.stringify(NavProvider.navTabs.toArray()));
+   // console.log('NavProvider home => ' + JSON.stringify(NavProvider.navTabs.home.label));
+   // console.log('NavProvider => ' + JSON.stringify(NavProvider.navTabs.toArray()));
     UserHolderProvider.sanity();
 
     $urlRouterProvider.when('/search', function(UserHolder){
       if (UserHolder.getUser()) {
         console.log('I have a user!');
         return '/search';
+      } else {
+        console.log('I do not have a user!');
+        return '/';
+      }
+    });
+    $urlRouterProvider.when('/recruiter-results', function(UserHolder){
+      if (UserHolder.getUser()) {
+        console.log('I have a user!');
+        return '/recruiter-results';
       } else {
         console.log('I do not have a user!');
         return '/';
@@ -109,17 +120,17 @@ angular
         templateUrl: 'views/home.html',
         controller: 'MainCtrl'
       })
-      .state('recruiter-rating', {
-        url: '/recruiter-rating',
+      .state(NavProvider.navTabs.recruiterRatings.state, {
+        url: '/recruiter-rating/:recruiterId',
         templateUrl: 'views/recruiter-rating.html',
-        controller: 'AboutCtrl'
+        controller: 'RecruiterCtrl'
       })
       .state('company-results', {
         url: '/company-results',
         templateUrl: 'views/company-results.html',
         controller: 'AboutCtrl'
       })
-      .state('recruiter-results', {
+      .state(NavProvider.navTabs.recruiterResults.state, {
         url: '/recruiter-results',
         templateUrl: 'views/recruiter-results.html',
         controller: 'AboutCtrl'

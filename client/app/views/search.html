@@ -1,9 +1,15 @@
 <div class="container">
 	<center>
-		<form class="navbar-form" ng-submit="findRecruiter()">
+		<form class="navbar-form">
 		  <h3 class="form-signin-heading">Find Recruiters</h3>
 		  <input placeholder="Name" type="text" class="form-control" ng-model="recruiterName" autofocus="">
-		  <button class="btn btn-lg btn-success" ng-click="findRecruiter()">Search</button>
+		  <button class="btn btn-lg btn-success" ng-click="findRecruiters()">Search</button>
 		</form>
 	</center>
+  <ul>
+    <li ng-repeat="recruiter in recruiters">
+      <span><a href="#" ng-click="getRecruiter(recruiter.id);"
+               onaftersave="updateGroup(group)">{{ recruiter.first_name }}  {{ recruiter.last_name }}</a></span>
+    </li>
+  </ul>
 </div>

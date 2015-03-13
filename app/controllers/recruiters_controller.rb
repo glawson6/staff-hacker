@@ -13,8 +13,14 @@ class RecruitersController < ApplicationController
 
   # GET /recruiters/1
   # GET /recruiters/1.json
+  # t.string   "first_name"
+  # t.string   "last_name"
+  # t.integer  "company_id"
+  # t.string   "image_url"
   def show
-    render json: @recruiter
+
+    render json: {first_name: @recruiter.first_name,  last_name: @recruiter.last_name, company_id: @recruiter.company.name,
+                  image_url: @recruiter.image_url, ratings: @recruiter.ratings}
   end
 
   # POST /recruiters
@@ -52,15 +58,29 @@ class RecruitersController < ApplicationController
   def search
     puts 'We are authenticated'
     recruiter_search = params[:search]
+    name = params[:search][:name].downcase if params[:search][:name]
+
+    # Create where clause for Recruiter model search
+    name_where = " LOWER(last_name) LIKE '%#{name}%' OR LOWER(first_name) LIKE '%#{name}%'" if name
+    # Create where clause for Company model search
+    company_name_where = " LOWER(name) LIKE '%#{name}%'" if name
+
+    #Create all_recruiters array. We don't know if we will have results in Recruiters or Companies, but we will dump all
+    # results into this array
     all_recruiters = []
-    named_recruiters = Recruiter.where(name: recruiter_search[:name]) if recruiter_search[:name]
+    named_recruiters = Recruiter.where(name_where) if name_where
     puts "named_recruiters => #{named_recruiters}"
-    named_recruiters.each{|recruiter| all_recruiters << recuiter} if named_recruiters
-    companies = Company.where(name: recruiter_search[:company_name]) if recruiter_search[:company_name]
-    company_recruiters = companies.recruiters if (companies && companies.length > 0)
-    company_recruiters.each{|recruiter| all_recruiters << recuiter} if company_recruiters
-    recruiter_map = all_recruiters.map{|recruiter| {name: recruiter.name, company_name: recruiter.company.name, website: recruiter.company.website}}
+    #Populate recruiters found in recruiter model if there are any results
+    named_recruiters.each{|recruiter| all_recruiters << recruiter} if named_recruiters
+    companies = Company.where(company_name_where) if company_name_where
+    #Populate recruiters found in Company model if there are any results. Each company will have an array of recruiters.
+    # We will have to iterate over every company and then iterate over every recruiter found in each company
+    # Only add recruiter if it is not in all_recruiter array
+    company_recruiters = companies.each{|company| company.recruiters.each{|recruiter| all_recruiters << recruiter unless all_recruiters.include? recruiter}} if companies
+    #Create map for JSON output
+    recruiter_map = all_recruiters.map{|recruiter| {id:recruiter.id,image_url: recruiter.image_url,first_name: recruiter.last_name,first_name: recruiter.last_name, company_name: recruiter.company.name, website: recruiter.company.website}}
     puts recruiter_map
+
     render json: recruiter_map
   end
 
