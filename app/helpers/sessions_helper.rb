@@ -3,34 +3,43 @@ module SessionsHelper
     remember_token = User.new_remember_token
     session[:remember_token] = remember_token
     cookies.permanent[:remember_token] = remember_token
-    #user.update_attribute(:remember_token, User.digest(remember_token))
     user.update_attribute(:remember_token, remember_token)
     self.current_user = user
   end
 
+  def resolve_token
+    token = request.headers['HTTP_REMEMBER_TOKEN'] || cookies[:remember_token]
+    puts token
+    token
+  end
+
   def sign_out
-    #binding.pry
-    if current_user_token(request.headers['HTTP_REMEMBER_TOKEN'])
-      current_user.update_attribute(:remember_token, User.new_remember_token)
+    token = resolve_token
+    user = current_user_token(token)
+    puts "Signing out user current_user #{user} with token #{token}"
+    if (user)
+      user.update_attribute(:remember_token, User.new_remember_token)
       cookies.delete(:remember_token)
       self.current_user = nil
     end
   end
 
   def signed_in?
-    puts "request.headers['HTTP_REMEMBER_TOKEN'] => #{request.headers['HTTP_REMEMBER_TOKEN']}"
-    !current_user_token(request.headers['HTTP_REMEMBER_TOKEN']).nil?
+    puts "resolve_token => #{resolve_token}"
+    signedin = !current_user_token(resolve_token).nil?
+    puts "signedin => #{signedin}"
+    signedin
   end
 
   def current_user=(user)
     @current_user = user
   end
 
-  def current_user
-    puts 'Called current_user!!!!!'
-    remember_token = User.digest(cookies[:remember_token])
-    @current_user ||= User.find_by(remember_token: remember_token)
-  end
+  # def current_user
+  #   puts 'Called current_user!!!!!'
+  #   remember_token = User.digest(cookies[:remember_token])
+  #   @current_user ||= User.find_by(remember_token: remember_token)
+  # end
 
   def current_user_token(token)
     remember_token = User.digest(token)

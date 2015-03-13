@@ -76,29 +76,32 @@ angular
       }
     };
   })
-  .config(function ($stateProvider, $urlRouterProvider, NavProvider,UserHolderProvider) {
+  .config(function ($stateProvider, $urlRouterProvider, NavProvider,UserHolderProvider,$httpProvider) {
    // console.log('NavProvider home => ' + JSON.stringify(NavProvider.navTabs.home.label));
    // console.log('NavProvider => ' + JSON.stringify(NavProvider.navTabs.toArray()));
+    $httpProvider.defaults.withCredentials = true;
     UserHolderProvider.sanity();
 
-    $urlRouterProvider.when('/search', function(UserHolder){
-      if (UserHolder.getUser()) {
-        console.log('I have a user!');
-        return '/search';
-      } else {
-        console.log('I do not have a user!');
-        return '/';
-      }
-    });
-    $urlRouterProvider.when('/recruiter-results', function(UserHolder){
-      if (UserHolder.getUser()) {
-        console.log('I have a user!');
-        return '/recruiter-results';
-      } else {
-        console.log('I do not have a user!');
-        return '/';
-      }
-    });
+    //$urlRouterProvider.when('/search', function(UserHolder,AuthService){
+    //  var user = UserHolder.getUser() || AuthService.findSessionUser();
+    //  console.log('userHolder in $urlRouterProvider.when '+JSON.stringify(UserHolder.getUser()));
+    //  if (user) {
+    //    console.log('I have a user!');
+    //    return '/search';
+    //  } else {
+    //    console.log('I do not have a user!');
+    //    return '/';
+    //  }
+    //});
+    //$urlRouterProvider.when('/recruiter-results', function(UserHolder){
+    //  if (UserHolder.getUser()) {
+    //    console.log('I have a user!');
+    //    return '/recruiter-results';
+    //  } else {
+    //    console.log('I do not have a user!');
+    //    return '/';
+    //  }
+    //});
     $stateProvider
       .state(NavProvider.navTabs.home.state, {
         url: '/',
@@ -138,7 +141,18 @@ angular
     .state(NavProvider.navTabs.search.state, {
         url: '/search',
         templateUrl: 'views/search.html',
-        controller: 'SearchCtrl'
+        controller: 'SearchCtrl',
+        onEnter: ['$state', 'AuthService', function($state, AuthService) {
+          AuthService.findSessionUser()
+            .success(function(user){
+              if (!user){
+                $state.go('home');
+              } 
+            })
+            .error(function(){
+              $state.go('home');
+            });
+        }]
     });
     $urlRouterProvider.otherwise('home');
   });

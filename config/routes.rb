@@ -6,7 +6,7 @@ Rails.application.routes.draw do
     resources :recruiters, except: [:new, :edit]
     resources :ratings, except: [:new, :edit]
     resources :users, except: [:edit]
-    resources :sessions,  only:   [:create]
+    resources :sessions,  only:   [:create, :index]
     post '/searchRecruiters', to: 'recruiters#search'
     get '/signup',    to: 'users#create'
     post '/signup',    to: 'users#create'
