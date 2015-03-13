@@ -8,7 +8,7 @@ gem 'responders', '~> 2.0'
 
 # To use ActiveModel has_secure_password
 gem 'rack-cors', :require => 'rack/cors'
-#gem 'puma'
+gem 'puma'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
