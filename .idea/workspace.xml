@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8382c1ac-eceb-4986-b577-7545d25ad6ae" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/scripts/controllers/auth.js" afterPath="$PROJECT_DIR$/client/app/scripts/controllers/auth.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/views/recruiter-rating.html" afterPath="$PROJECT_DIR$/client/app/views/recruiter-rating.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/scripts/controllers/recruiter.js" afterPath="$PROJECT_DIR$/client/app/scripts/controllers/recruiter.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/recruiter.rb" afterPath="$PROJECT_DIR$/app/models/recruiter.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/recruiters_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/recruiters_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="staff-hacker.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -62,8 +57,8 @@
       <file leaf-file-name="recruiters_controller.rb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/recruiters_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.92845786" vertical-offset="661" max-vertical-offset="1530">
-              <caret line="83" column="30" selection-start-line="83" selection-start-column="30" selection-end-line="83" selection-end-column="30" />
+            <state vertical-scroll-proportion="0.2607313" vertical-offset="661" max-vertical-offset="1530">
+              <caret line="55" column="5" selection-start-line="55" selection-start-column="5" selection-end-line="55" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -1464,8 +1459,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/recruiters_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.92845786" vertical-offset="661" max-vertical-offset="1530">
-          <caret line="83" column="30" selection-start-line="83" selection-start-column="30" selection-end-line="83" selection-end-column="30" />
+        <state vertical-scroll-proportion="0.2607313" vertical-offset="661" max-vertical-offset="1530">
+          <caret line="55" column="5" selection-start-line="55" selection-start-column="5" selection-end-line="55" selection-end-column="5" />
           <folding />
         </state>
       </provider>
