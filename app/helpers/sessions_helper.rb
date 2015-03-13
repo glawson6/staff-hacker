@@ -3,6 +3,7 @@ module SessionsHelper
     remember_token = User.new_remember_token
     session[:remember_token] = remember_token
     cookies.permanent[:remember_token] = remember_token
+    puts "Heroku problems here"
     user.update_attribute(:remember_token, remember_token)
     self.current_user = user
   end
