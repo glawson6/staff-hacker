@@ -11,7 +11,14 @@ angular.module('staffHackerApp')
   .controller('RecruiterCtrl', function ($scope,$location,$stateParams,$state,RecruiterService, AuthService,Nav) {
 
     $scope.recruiterId = $stateParams.recruiterId;
-    $scope.recruiter = RecruiterService.getRecruiter($scope.recruiterId,AuthService.getUser());
+    $scope.recruiterCall = RecruiterService.getRecruiter($scope.recruiterId, AuthService.getUser())
+      .success(function (data) {
+        $scope.recruiter = data;
+        console.log('Got recruiter '+JSON.stringify($scope.recruiter)+' with id '+$scope.recruiter.id);
+      })
+      .error(function (data) {
+        alert('getRecruiter ERROR' + data);
+      });
 
     console.log('RecruiterCtrl is alive with recruiterId '+$scope.recruiterId);
     $scope.createRating = function(){
