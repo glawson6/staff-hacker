@@ -2,19 +2,19 @@ Rails.application.routes.draw do
 
 
   scope '/api' do
-    resources :companies, except: [:new, :edit]
-    resources :recruiters, except: [:new, :edit]
-    resources :ratings, except: [:new, :edit]
-    resources :users, except: [:edit]
-    resources :sessions,  only:   [:create, :index]
+    resources :companies, except:   [:new, :edit]
+    resources :recruiters, except:  [:new, :edit]
+    resources :ratings, except:     [:new, :edit]
+    resources :users, except:       [:edit]
+    resources :sessions,  only:     [:create, :index]
     post '/searchRecruiters', to: 'recruiters#search'
-    get '/signup',    to: 'users#create'
-    post '/signup',    to: 'users#create'
-    get '/signin',    to: 'sessions#create'
-    post '/signin',    to: 'sessions#create'
-    delete '/signout',   to: 'sessions#destroy'
-    get '/signout',   to: 'sessions#destroy'
-    post '/signout',   to: 'sessions#destroy'
+    get '/signup',            to: 'users#create'
+    post '/signup',           to: 'users#create'
+    get '/signin',            to: 'sessions#create'
+    post '/signin',           to: 'sessions#create'
+    delete '/signout',        to: 'sessions#destroy'
+    get '/signout',           to: 'sessions#destroy'
+    post '/signout',          to: 'sessions#destroy'
   end
 
   # The priority is based upon order of creation: first created -> highest priority.
