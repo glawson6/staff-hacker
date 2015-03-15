@@ -10,7 +10,7 @@ html {
 }
 
 body {
-  padding: 0;
+  
   margin-top: 50px;
 }
 
@@ -23,6 +23,12 @@ h5,
 h6 {
     font-family: "Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: 700;
+}
+
+.site-wrapper {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
 }
 
 .navbar {
@@ -258,12 +264,6 @@ hr {
   margin-top: -20px;
 }
 
-.footer {
-  padding: 55px 0;
-  bottom: 0;
-  background-color: #f9f5f1;
-}
-
 input {
   margin-bottom: 10px;
 }
@@ -323,4 +323,19 @@ section {
   height: 100px;
   width: 100px;
   margin-right: 20px;
+}
+
+.recruiter-page {
+  margin-top: 85px;
+}
+
+.footer {
+  padding: 60px 0;
+  bottom: 0;
+  background-color: #2f4779;
+  height: 60px;
+}
+
+.footer .list-inline a {
+  color: white;
 }
