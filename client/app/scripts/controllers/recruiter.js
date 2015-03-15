@@ -30,7 +30,15 @@ angular.module('staffHackerApp')
       RecruiterService.createRating(rating,user)
         .success(function (data) {
           $scope.recruiter = data;
-        })
+          RecruiterService.getRecruiter($scope.recruiterId, AuthService.getUser())
+            .success(function (data) {
+              $scope.recruiter = data;
+              console.log('Got recruiter '+JSON.stringify($scope.recruiter)+' with id '+$scope.recruiter.id);
+            })
+            .error(function (data) {
+              alert('getRecruiter ERROR' + data);
+            });
+              })
         .error(function (data) {
           alert('findRecruiters ERROR' + data);
         });

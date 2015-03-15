@@ -1,15 +1,62 @@
+<!-- SEARCH BAR -->
+
 <div class="container">
-	<center>
-		<form class="navbar-form">
-		  <h3 class="form-signin-heading">Find Recruiters</h3>
-		  <input placeholder="Name" type="text" class="form-control" ng-model="recruiterName" autofocus="">
-		  <button class="btn btn-lg btn-success" ng-click="findRecruiters()">Search</button>
-		</form>
-	</center>
-  <ul>
-    <li ng-repeat="recruiter in recruiters">
-      <span><a href="#" ng-click="getRecruiter(recruiter.id);"
-               onaftersave="updateGroup(group)">{{ recruiter.first_name }}  {{ recruiter.last_name }}</a></span>
-    </li>
-  </ul>
+	<div class="row">
+		<div class="col-md-1"></div>
+			<center>
+				<div class="col-md-10 search-bar">
+					<h3 class="form-signin-heading">Find Recruiters</h3>
+						<form class="navbar-form">
+						  <input placeholder="Recruiter Name" type="text" class="form-control" ng-model="recruiterName" autofocus="">
+						  <button class="btn btn-primary" ng-click="findRecruiters()">Search</button>
+						</form>
+				</div>
+			</center>
+		<div class="col-md-1"></div>
+		</div>
+	</div>
+
+<!-- SEARCH RESULTS -->
+	<div class="row">
+		<div class="col-md-2"></div>
+			<div class="media-list col-md-8">
+			  <div class="media" ng-repeat="recruiter in recruiters">
+			  	<div class="panel panel-default bg-success" ng-click="getRecruiter(recruiter.id)">
+	  				<div class="panel-body">
+	  					<div class="row">
+	  					<!-- PICTURE -->
+	  						<div class="col-md-2 results-picture">
+							    <div class="media-left">
+							      <a href="#">
+							        <img class="media-object" src="{{ recruiter.image_url }}" ng-click="getRecruiter(recruiter.id)" alt="...">
+							     	</a>
+							    </div>
+						    </div>
+						  <!-- NAME AND COMPANY -->
+						    <div class="col-md-3">
+							    <div class="media-body">
+							      <h2 class="media-heading"><span><a href="#"
+							               onaftersave="updateGroup(group)">{{ recruiter.first_name }}  {{ recruiter.last_name }}</a></span></h2>
+							               <h3>{{ recruiter.company_name }}</h3><br>
+
+							    </div>
+						    </div>
+						  <!-- RATING -->
+						    <div class="col-md-7">
+							    <div class="" ng-init="drawStars(recruiter.id,recruiter.average,100)">
+                    <canvas id="starCanvas{{recruiter.id}}" draw-stars-js options="starsOptions(recruiter,50);"
+                            width="600" height="125"></canvas>
+							    	RATING STAR SYSTEM GOES HERE
+							    </div>
+						    </div>
+						  </div>
+						</div>
+					</div>
+			  </div>
+			</div>
+		<div class="col-md-2"></div>
+	</div>
+
 </div>
+
+
