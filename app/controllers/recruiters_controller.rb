@@ -1,5 +1,6 @@
-class RecruitersController < ApplicationController
+# Recruiters Controller
 
+class RecruitersController < ApplicationController
   before_action :set_recruiter, only: [:show, :update, :destroy]
   before_action :signed_in_user
 
@@ -18,9 +19,10 @@ class RecruitersController < ApplicationController
   # t.integer  "company_id"
   # t.string   "image_url"
   def show
-
-    render json: {first_name: @recruiter.first_name,  last_name: @recruiter.last_name, company_id: @recruiter.company.name,
-                  image_url: @recruiter.image_url, ratings: @recruiter.ratings, average: recruiter_rating_average(@recruiter.id)}
+    render json: { first_name: @recruiter.first_name,  last_name:
+                   @recruiter.last_name, company_id: @recruiter.company.name,
+                   image_url: @recruiter.image_url, ratings: @recruiter.ratings,
+                   average: recruiter_rating_average(@recruiter.id) }
   end
 
   # POST /recruiters
@@ -61,25 +63,35 @@ class RecruitersController < ApplicationController
     name = params[:search][:name].downcase if params[:search][:name]
 
     # Create where clause for Recruiter model search
-    name_where = " LOWER(last_name) LIKE '%#{name}%' OR LOWER(first_name) LIKE '%#{name}%'" if name
+    name_where = " LOWER(last_name) LIKE '%#{name}%' OR LOWER(first_name) LIKE
+    '%#{name}%'" if name
     # Create where clause for Company model search
     company_name_where = " LOWER(name) LIKE '%#{name}%'" if name
 
-    #Create all_recruiters array. We don't know if we will have results in Recruiters or Companies, but we will dump all
-    # results into this array
+    # Create all_recruiters array. We don't know if we will have results in
+    # Recruiters or Companies, but we will dump all results into this array
     all_recruiters = []
     named_recruiters = Recruiter.where(name_where) if name_where
     puts "named_recruiters => #{named_recruiters}"
-    #Populate recruiters found in recruiter model if there are any results
-    named_recruiters.each{|recruiter| all_recruiters << recruiter} if named_recruiters
+    # Populate recruiters found in recruiter model if there are any results
+    named_recruiters.each { |recruiter| all_recruiters << recruiter } if
+    named_recruiters
     companies = Company.where(company_name_where) if company_name_where
-    #Populate recruiters found in Company model if there are any results. Each company will have an array of recruiters.
-    # We will have to iterate over every company and then iterate over every recruiter found in each company
+    # Populate recruiters found in Company model if there are any results.
+    # Each company will have an array of recruiters.
+    # We will have to iterate over every company and then iterate over
+    # every recruiter found in each company
     # Only add recruiter if it is not in all_recruiter array
-    company_recruiters = companies.each{|company| company.recruiters.each{|recruiter| all_recruiters << recruiter unless all_recruiters.include? recruiter}} if companies
-    #Create map for JSON output
-    recruiter_map = all_recruiters.map{|recruiter| {id:recruiter.id,image_url: recruiter.image_url,first_name: recruiter.first_name,last_name: recruiter.last_name, company_name: recruiter.company.name,
-                                                    website: recruiter.company.website, average: recruiter_rating_average(recruiter.id)}}
+    company_recruiters = companies.each{|company|
+    company.recruiters.each{|recruiter| all_recruiters << recruiter unless
+    all_recruiters.include? recruiter} } if companies
+    # Create map for JSON output
+    recruiter_map = all_recruiters.map{|recruiter|
+      { id: recruiter.id, image_url: recruiter.image_url,
+        first_name: recruiter.first_name, last_name: recruiter.last_name,
+        company_name: recruiter.company.name,
+        website: recruiter.company.website,
+        average: recruiter_rating_average(recruiter.id) }}
     puts recruiter_map
 
     render json: recruiter_map
@@ -92,11 +104,11 @@ class RecruitersController < ApplicationController
 
   private
 
-    def set_recruiter
-      @recruiter = Recruiter.find(params[:id])
-    end
+  def set_recruiter
+    @recruiter = Recruiter.find(params[:id])
+  end
 
-    def recruiter_params
-      params.require(:recruiter).permit(:name, :company_id)
-    end
+  def recruiter_params
+    params.require(:recruiter).permit(:name, :company_id)
+  end
 end

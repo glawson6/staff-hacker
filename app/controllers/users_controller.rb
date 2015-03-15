@@ -1,3 +1,5 @@
+# Users Controller
+
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :update, :destroy]
 
@@ -31,7 +33,6 @@ class UsersController < ApplicationController
     end
   end
 
-
   # PATCH/PUT /users/1
   # PATCH/PUT /users/1.json
   def update
@@ -54,13 +55,12 @@ class UsersController < ApplicationController
 
   private
 
-    def set_user
-      @user = User.find(params[:id])
-    end
+  def set_user
+    @user = User.find(params[:id])
+  end
 
-    def user_params
-      params.require(:user).permit(:name, :email, :password, :password_confirmation)
-    end
+  def user_params
+    params.require(:user).permit(:name, :email, :password,
+                                 :password_confirmation)
+  end
 end
-    
-
