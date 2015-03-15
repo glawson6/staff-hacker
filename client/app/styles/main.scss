@@ -119,56 +119,11 @@ nav.shrink .navbar-toggle {
   margin-top: 150px;
 }
 
-
 .footer {
   padding: 55px 0;
   bottom: 0;
   background-color: white;
 }
-
-
-/*SIGN IN PAGE*/
-
-.form-signin .form-control {
-  position: relative;
-  height: auto;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  padding: 10px;
-  font-size: 16px;
-  width: 50%;
-}
-
-.btn-primary {
-  width: 300px;
-  height: 44px;
-}
-
-
-/*SEARCH PAGE*/
-
-.container .navbar-form .form-control {
-  position: relative;
-  height: auto;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  padding: 10px;
-  font-size: 16px;
-  width: 50%;
-}
-
-.panel .panel-default .panel-body a:hover {
-    background-color: red;
-}
-
-.media-list .media .media-left .media-object {
-  height: 100px;
-  width: 100px;
-  margin-right: 20px;
-}
-
 
 input {
   margin-bottom: 10px;
@@ -180,3 +135,53 @@ section {
     -o-animation-delay: 1s;
 }
 
+
+/*SIGN IN/UP PAGES*/
+
+.form-signin.sign-in  {
+  position: relative;
+  height: auto;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 10px;
+  font-size: 16px;
+  width: 50%;
+}
+
+.container .form-signin.sign-in .btn {
+  width: 200px;
+  height: 44px;
+}
+
+/*SEARCH PAGE*/
+
+.container .search-bar .navbar-form .form-control  {
+  position: relative;
+  height: auto;
+  font-size: 16px;
+  margin: 0px;
+  width: 50%;
+}
+
+.container .row .col-md-10 .btn {
+  width: 100px;
+}
+
+.navbar-form {
+  margin: 30px;
+}
+
+.media {
+  margin: 0px;
+}
+
+.media .panel :hover {
+  background-color: #F2F2F2;
+}
+
+.media-list .media .media-left .media-object {
+  height: 100px;
+  width: 100px;
+  margin-right: 20px;
+}
