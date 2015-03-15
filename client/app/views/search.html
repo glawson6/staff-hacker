@@ -25,7 +25,7 @@
 	  				<div class="panel-body">
 	  					<div class="row">
 	  					<!-- PICTURE -->
-	  						<div class="col-md-2 results-picture"> 
+	  						<div class="col-md-2 results-picture">
 							    <div class="media-left">
 							      <a href="#">
 							        <img class="media-object" src="{{ recruiter.image_url }}" ng-click="getRecruiter(recruiter.id)" alt="...">
@@ -33,26 +33,28 @@
 							    </div>
 						    </div>
 						  <!-- NAME AND COMPANY -->
-						    <div class="col-md-3"> 
+						    <div class="col-md-3">
 							    <div class="media-body">
-							      <h2 class="media-heading"><span><a href="#" 
+							      <h2 class="media-heading"><span><a href="#"
 							               onaftersave="updateGroup(group)">{{ recruiter.first_name }}  {{ recruiter.last_name }}</a></span></h2>
 							               <h3>{{ recruiter.company_name }}</h3><br>
-							      
+
 							    </div>
 						    </div>
 						  <!-- RATING -->
 						    <div class="col-md-7">
-							    <div class=>
+							    <div class="" ng-init="drawStars(recruiter.id,recruiter.average,100)">
+                    <canvas id="starCanvas{{recruiter.id}}" draw-stars-js options="starsOptions(recruiter,50);"
+                            width="600" height="125"></canvas>
 							    	RATING STAR SYSTEM GOES HERE
 							    </div>
 						    </div>
 						  </div>
-						</div>    	
-					</div>	
+						</div>
+					</div>
 			  </div>
 			</div>
-		<div class="col-md-2"></div>	
+		<div class="col-md-2"></div>
 	</div>
 
 </div>
