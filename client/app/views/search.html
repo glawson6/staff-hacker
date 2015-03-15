@@ -9,7 +9,8 @@
   <ul>
     <li ng-repeat="recruiter in recruiters">
       <span><a href="#" ng-click="getRecruiter(recruiter.id);"
-               onaftersave="updateGroup(group)">{{ recruiter.first_name }}  {{ recruiter.last_name }}</a></span>
+               onaftersave="updateGroup(group)"><img class="media-object" src="{{ recruiter.image_url }}" ng-click="getRecruiter(recruiter.id)" alt="..."> {{ recruiter.first_name }}  {{ recruiter.last_name }}
+               {{ recruiter.company_name }}</a></span>
     </li>
   </ul>
 </div>
