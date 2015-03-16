@@ -38,6 +38,7 @@ angular
   .provider('Nav', function () {
     var tabs = {
       home: {state: 'home', label: 'Home', active: true, visible: true},
+      index: {state: 'index', label: 'Home', active: false, visible: false},
       signup: {state: 'signup', label: 'Sign Up', active: false, visible: true},
       signin: {state: 'signin', label: 'Sign In', active: false, visible: true},
       signout: {state: 'signout', label: 'Sign Out', active: false, visible: false},
@@ -102,8 +103,13 @@ angular
     //  }
     //});
     $stateProvider
-      .state(NavProvider.navTabs.home.state, {
+      .state(NavProvider.navTabs.index.state, {
         url: '/',
+        templateUrl: 'views/home.html',
+        controller: 'MainCtrl'
+      })
+      .state(NavProvider.navTabs.home.state, {
+        url: '/home',
         templateUrl: 'views/home.html',
         controller: 'MainCtrl'
       })
@@ -154,6 +160,6 @@ angular
             });
         }]
     });
-    $urlRouterProvider.otherwise('home');
+    $urlRouterProvider.otherwise(NavProvider.navTabs.home.state);
   });
 

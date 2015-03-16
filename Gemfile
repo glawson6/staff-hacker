@@ -42,6 +42,7 @@ group :production, :staging do
 end
 group :development do
   gem 'spring'
+  gem "rails-erd"
 end
 
 group :development, :test do
