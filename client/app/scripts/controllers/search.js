@@ -36,33 +36,6 @@ angular.module('staffHackerApp')
 
     $scope.recruiterResultsState = Nav.recruiterResults.state;
 
-    $scope.starsOptions = function(recruiter,radius){
-      return {
-        average: recruiter.average,
-        radius: radius
-      };
-    };
-
-    $scope.drawStars = function (id, average, radius) {
-      var stage = new createjs.Stage('starCanvas' + id);
-      average = average || 0;
-      var wholeInt = Math.floor(average);
-      var diff = average - wholeInt;
-      console.log('diff ' + diff + ' average ' + average + ' id ' + id);
-      for (var i = 0; i < wholeInt; i++) {
-        var polystar2 = new createjs.Shape();
-        polystar2.graphics.setStrokeStyle(1).beginStroke('#000000').beginFill('#FBB62B').drawPolyStar((i * radius * 2) + radius, radius, radius, 5, 0.5, -90);
-        stage.addChild(polystar2);
-      }
-      if (diff > 0.0) {
-        var polystar = new createjs.Shape();
-        var fillPct = 4 * radius * (1 - diff);
-        polystar.graphics.setStrokeStyle(1).beginStroke('#000000').beginLinearGradientFill(['#FFF', '#FBB62B'], [0.5, 0.5], 0, 0, 0, fillPct).drawPolyStar((wholeInt * radius * 2) + radius, radius, radius, 5, 0.5, -90);
-        stage.addChild(polystar);
-      }
-      stage.update();
-    };
-
   })
   .directive('drawStarsJs', function () {
     return {
@@ -103,7 +76,6 @@ angular.module('staffHackerApp')
         }
 
         return function (scope, element, attrs) {
-
           scope.$watch('options', function (newV, oldV) {
             drawStars(element, scope.options);
           }, true);
