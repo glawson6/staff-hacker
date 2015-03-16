@@ -6,3 +6,13 @@ curl -X POST  --header "Content-Type:application/json" -d @companyAdd.json http:
 
 less
 
+
+psql -c "CREATE USER staff-hacker WITH PASSWORD 'staff-hacker';"
+
+
+CREATE USER "staff-hacker" WITH PASSWORD 'staff-hacker';
+CREATE DATABASE "staff-hacker_production" OWNER "staff-hacker";
+GRANT ALL PRIVILEGES ON DATABASE "staff-hacker_production" to "staff-hacker";
+ALTER USER "staff-hacker" CREATEDB;
+
+
