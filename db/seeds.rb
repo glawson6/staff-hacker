@@ -759,7 +759,7 @@ user = User.create(name: 'staff', email: 'staff@hack.net', password: 'foobar', p
 company = Company.create(name: 'TapTech', website: 'http://taptech.net')
 
 recruiter = company.recruiters.create(first_name: 'Tap',last_name: 'That', image_url: "http://cf.chucklesnetwork.com/items/9/9/1/5/6/original/tap-that-i-would.jpg")
-(0..5).each do |i|
-  recruiter.ratings.create(rate: i, comments: 'A #{i} comment', user: user)
-end
+
+recruiter.ratings.create(rate: 5, comments: 'I would totally advise people to work with Tap That. I sure did, and it was great.', user: user)
+recruiter.ratings.create(rate: 5, comments: 'Someone mentioned "Tap That." So I did', user: user)
 
