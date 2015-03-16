@@ -10,7 +10,7 @@ html {
 }
 
 body {
-  padding: 0;
+  
   margin-top: 50px;
 }
 
@@ -23,6 +23,12 @@ h5,
 h6 {
     font-family: "Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: 700;
+}
+
+.site-wrapper {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
 }
 
 .navbar {
@@ -258,12 +264,6 @@ hr {
   margin-top: -20px;
 }
 
-.footer {
-  padding: 55px 0;
-  bottom: 0;
-  background-color: #f9f5f1;
-}
-
 input {
   margin-bottom: 10px;
 }
@@ -273,7 +273,6 @@ section {
    -moz-animation-delay: 1s;
     -o-animation-delay: 1s;
 }
-
 
 /*SIGN IN/UP PAGES*/
 
@@ -327,10 +326,6 @@ section {
 
 /*RECRUITER RATING PAGE*/
 
-.container.form-signin.recruiter-rating {
-  margin-top: 80px
-}
-
 .media-object.recruiter-rating {
   height: 200px;
   width: 200px;
@@ -347,9 +342,11 @@ section {
 }
 
 table {
+  position: center;
   width: 80%;
   color: #2F4F4F;
-  margin: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 table, th, td {
@@ -378,4 +375,19 @@ td {
   font-weight: normal;
 }
 
+.recruiter-page {
+  margin-top: 85px;
+}
 
+/*FOOTER*/
+
+.footer {
+  padding: 60px 0;
+  bottom: 0;
+  background-color: #2f4779;
+  height: 60px;
+}
+
+.footer .list-inline a {
+  color: white;
+}
