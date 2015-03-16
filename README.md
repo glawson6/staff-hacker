@@ -42,7 +42,7 @@ StaffHacker is a Rails/AngularJS project created for the General Assembly Web De
 
 ##Wireframes
 * Recruiter Rating Page: 
-![Recruiter Rating Page](https://trello-attachments.s3.amazonaws.com/54fb52c459e572785ed7b175/3264x2448/da36a3a32cb5f0e28b04e55778de5234/IMG_1242.JPG)
+![Recruiter Rating Page](https://trello-attachments.s3.amazonaws.com/54fb52c459e572785ed7b175/600x800/d1fa4e6653a2b398df33008946be529d/IMG_1242.JPG.jpg)
 * Sign Up Page:
 ![Sign Up Page](https://trello-attachments.s3.amazonaws.com/54fa25b13a2c05dd6d5402bb/600x800/d504f398b7722bbdecc585d362b5fa97/IMG_1246.JPG.jpg)
 * Results Page:
