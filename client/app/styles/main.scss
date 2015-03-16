@@ -326,6 +326,10 @@ section {
 
 /*RECRUITER RATING PAGE*/
 
+.container.form-signin.recruiter-rating {
+  margin-top: 85px;
+}
+
 .media-object.recruiter-rating {
   height: 200px;
   width: 200px;
@@ -373,10 +377,6 @@ table tr th:nth-child(2) {
 td {
   font-style: italic;
   font-weight: normal;
-}
-
-.recruiter-page {
-  margin-top: 85px;
 }
 
 /*FOOTER*/
