@@ -7,7 +7,7 @@
 				<div class="col-md-10 search-bar">
 					<h3 class="form-signin-heading">Find Recruiters</h3>
 						<form class="navbar-form">
-						  <input placeholder="Recruiter Name" type="text" class="form-control" ng-model="recruiterName" autofocus="">
+						  <input placeholder="Recruiter or Company Name" type="text" class="form-control" ng-model="recruiterName" autofocus="">
 						  <button class="btn btn-primary" ng-click="findRecruiters()">Search</button>
 						</form>
 				</div>
@@ -46,7 +46,6 @@
 							    <div class="" ng-init="drawStars(recruiter.id,recruiter.average,100)">
                     <canvas id="starCanvas{{recruiter.id}}" draw-stars-js options="starsOptions(recruiter,50);"
                             width="600" height="125"></canvas>
-							    	RATING STAR SYSTEM GOES HERE
 							    </div>
 						    </div>
 						  </div>

@@ -324,3 +324,58 @@ section {
   width: 100px;
   margin-right: 20px;
 }
+
+/*RECRUITER RATING PAGE*/
+
+.container.form-signin.recruiter-rating {
+  margin-top: 80px
+}
+
+.media-object.recruiter-rating {
+  height: 200px;
+  width: 200px;
+}
+
+#rating-text-area {
+  width: 100%;
+}
+
+#create-rating-button {
+  position: relative;
+  left: 82%;
+  margin: 10px;
+}
+
+table {
+  width: 80%;
+  color: #2F4F4F;
+  margin: 20px;
+}
+
+table, th, td {
+  border: 1px solid #A9A9A9;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  background-color: #337ab7;
+  color: white;
+  border: none;
+  font-size: 18px;
+}
+
+table tr th:nth-child(2) {
+  width: 100%;
+}
+
+td {
+  font-style: italic;
+  font-weight: normal;
+}
+
+
