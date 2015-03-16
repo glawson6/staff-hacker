@@ -3,7 +3,7 @@ module SessionsHelper
     remember_token = User.new_remember_token
     session[:remember_token] = remember_token
     cookies.permanent[:remember_token] = remember_token
-    puts "Heroku problems here"
+    puts 'Heroku problems here'
     user.update_attribute(:remember_token, remember_token)
     self.current_user = user
   end
@@ -18,7 +18,7 @@ module SessionsHelper
     token = resolve_token
     user = current_user_token(token)
     puts "Signing out user current_user #{user} with token #{token}"
-    if (user)
+    if user
       user.update_attribute(:remember_token, User.new_remember_token)
       cookies.delete(:remember_token)
       self.current_user = nil
@@ -53,12 +53,13 @@ module SessionsHelper
   end
 
   def redirect_if_signed_in
-    #redirect_to(root_path) if signed_in?
+    # redirect_to(root_path) if signed_in?
     if signed_in?
-      puts "Are we signed in?"
+      puts 'Are we signed in?'
       render json: current_user
     else
-      render json: {user: "Invalid Email or Password"}, status: :unprocessable_entity
+      render json: { user: 'Invalid Email or Password' },
+                     status: :unprocessable_entity
     end
   end
 
@@ -74,12 +75,12 @@ module SessionsHelper
   def signed_in_user
     unless signed_in?
       # store_location
-      render json: {user: "Please sign in."}, status: :unprocessable_entity
+      render json: { user: 'Please sign in.' }, status: :unprocessable_entity
     end
   end
 
   def view_headers
-    headers.each{|header| puts header.to_s}
+    headers.each { |header| puts header.to_s }
   end
 
   def admin_user

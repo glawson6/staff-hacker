@@ -1,12 +1,13 @@
 <div class="container form-signin recruiter-rating" ng-controller="RecruiterCtrl">
 
       <div class="media">
+
       <!-- THE HEADER WITH PICTURE AND STARS -->
         <div class="row">
           <div class="col-md-3 recruiter-raiting-picture-col">
             <div class="media-left">
               <a href="#">
-                <img class="media-object recruiter-rating" src="http://lorempixel.com/100/100/people" alt="Some Image">
+                <img class="media-object" src={{recruiter.image_url}} style="height: 200px; width: 200px;" alt="Recruiter Picture"/>
               </a>
             </div>
           </div>
@@ -17,6 +18,7 @@
               <h3 class="media-heading">{{ recruiter.company_id }}</h3>
             </div>
           </div>
+
 
           <div class="col-md-6">
             <canvas id="starCanvas{{recruiter.id}}" draw-stars-js options="{average: recruiter.average, radius: 50}"

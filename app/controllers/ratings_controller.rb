@@ -1,3 +1,5 @@
+# Ratings Controller
+
 class RatingsController < ApplicationController
   before_action :set_rating, only: [:show, :update, :destroy]
 
@@ -49,11 +51,11 @@ class RatingsController < ApplicationController
 
   private
 
-    def set_rating
-      @rating = Rating.find(params[:id])
-    end
+  def set_rating
+    @rating = Rating.find(params[:id])
+  end
 
-    def rating_params
-      params.require(:rating).permit(:comments, :rate, :user_id, :recruiter_id)
-    end
+  def rating_params
+    params.require(:rating).permit(:comments, :rate, :user_id, :recruiter_id)
+  end
 end
