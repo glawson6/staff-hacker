@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8382c1ac-eceb-4986-b577-7545d25ad6ae" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/seeds.rb" afterPath="$PROJECT_DIR$/db/seeds.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/scripts/app.js" afterPath="$PROJECT_DIR$/client/app/scripts/app.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="staff-hacker.iws" />
@@ -58,7 +58,7 @@
       <file leaf-file-name="recruiter-rating.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/app/views/recruiter-rating.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-13.125" vertical-offset="45" max-vertical-offset="1380">
+            <state vertical-scroll-proportion="0.0" vertical-offset="45" max-vertical-offset="1380">
               <caret line="24" column="30" selection-start-line="24" selection-start-column="30" selection-end-line="24" selection-end-column="30" />
               <folding />
             </state>
@@ -68,7 +68,7 @@
       <file leaf-file-name="search.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/app/views/search.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-20.0" vertical-offset="225" max-vertical-offset="990">
+            <state vertical-scroll-proportion="0.0" vertical-offset="225" max-vertical-offset="990">
               <caret line="47" column="38" selection-start-line="47" selection-start-column="38" selection-end-line="47" selection-end-column="38" />
               <folding />
             </state>
@@ -98,7 +98,7 @@
       <file leaf-file-name="users_controller.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/users_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1080">
+            <state vertical-scroll-proportion="0.0" vertical-offset="270" max-vertical-offset="1080">
               <caret line="18" column="21" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
               <folding />
             </state>
@@ -115,21 +115,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="seeds.rb" pinned="false" current-in-tab="true">
+      <file leaf-file-name="seeds.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/db/seeds.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.80922097" vertical-offset="10936" max-vertical-offset="11565">
+            <state vertical-scroll-proportion="0.0" vertical-offset="10900" max-vertical-offset="11565">
               <caret line="763" column="45" selection-start-line="763" selection-start-column="45" selection-end-line="763" selection-end-column="45" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="recruiters_controller.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/recruiters_controller.rb">
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/client/app/scripts/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="886" max-vertical-offset="1800">
-              <caret line="101" column="49" selection-start-line="101" selection-start-column="49" selection-end-line="101" selection-end-column="49" />
+            <state vertical-scroll-proportion="0.53271025" vertical-offset="1248" max-vertical-offset="2565">
+              <caret line="106" column="15" selection-start-line="106" selection-start-column="15" selection-end-line="106" selection-end-column="15" />
               <folding />
             </state>
           </provider>
@@ -182,7 +182,6 @@
         <option value="$PROJECT_DIR$/client/app/scripts/controllers/nav.js" />
         <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/dev-notes.txt" />
-        <option value="$PROJECT_DIR$/client/app/scripts/app.js" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
         <option value="$PROJECT_DIR$/app/controllers/recruiters_controller.rb" />
         <option value="$PROJECT_DIR$/.gitignore" />
@@ -193,6 +192,7 @@
         <option value="$PROJECT_DIR$/client/app/views/recruiter-rating.html" />
         <option value="$PROJECT_DIR$/client/app/views/search.html" />
         <option value="$PROJECT_DIR$/db/seeds.rb" />
+        <option value="$PROJECT_DIR$/client/app/scripts/app.js" />
       </list>
     </option>
   </component>
@@ -400,6 +400,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="RailsProjectView" />
       <pane id="ProjectPane">
         <subPane>
@@ -685,7 +686,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -812,17 +812,17 @@
       <RUBY_RUN_CONFIG NAME="SCRIPT_ARGS" VALUE="" />
       <method />
     </configuration>
-    <configuration default="true" type="com.intellij.database.run.ConsoleRunConfigurationType" factoryName="Query Language Console">
-      <option name="VM_PARAMETERS" value="" />
-      <option name="USER_CFG_CLASS" />
-      <option name="CONTEXT_PROVIDER" />
+    <configuration default="true" type="NodeWebKit" factoryName="Node-webkit">
+      <option name="name" value="" />
       <method />
     </configuration>
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
       <method />
     </configuration>
-    <configuration default="true" type="NodeWebKit" factoryName="Node-webkit">
-      <option name="name" value="" />
+    <configuration default="true" type="com.intellij.database.run.ConsoleRunConfigurationType" factoryName="Query Language Console">
+      <option name="VM_PARAMETERS" value="" />
+      <option name="USER_CFG_CLASS" />
+      <option name="CONTEXT_PROVIDER" />
       <method />
     </configuration>
     <configuration default="true" type="TestUnitRunConfigurationType" factoryName="Test::Unit/Shoulda/Minitest">
@@ -904,7 +904,7 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2569956" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31811488" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32253313" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -938,9 +938,9 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26141384" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3283582" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -1053,14 +1053,14 @@
             <node x="" y="">e589d5fd-86a0-49b1-b9d8-345dd9cc31fe.table:staff-hacker_development.pg_catalog.pg_conversion</node>
             <node x="" y="">e589d5fd-86a0-49b1-b9d8-345dd9cc31fe.table:staff-hacker_development.pg_catalog.pg_tables</node>
             <node x="" y="">e589d5fd-86a0-49b1-b9d8-345dd9cc31fe.table:staff-hacker_development.pg_catalog.pg_amproc</node>
-            <node x="" y="">e589d5fd-86a0-49b1-b9d8-345dd9cc31fe.table:staff-hacker_development.pg_catalog.pg_collation</node>
             <node x="" y="">e589d5fd-86a0-49b1-b9d8-345dd9cc31fe.table:staff-hacker_development.public.recruiters</node>
-            <node x="" y="">e589d5fd-86a0-49b1-b9d8-345dd9cc31fe.table:staff-hacker_development.pg_catalog.pg_user_mappings</node>
+            <node x="" y="">e589d5fd-86a0-49b1-b9d8-345dd9cc31fe.table:staff-hacker_development.pg_catalog.pg_collation</node>
             <node x="" y="">e589d5fd-86a0-49b1-b9d8-345dd9cc31fe.table:staff-hacker_development.pg_catalog.pg_largeobject</node>
+            <node x="" y="">e589d5fd-86a0-49b1-b9d8-345dd9cc31fe.table:staff-hacker_development.pg_catalog.pg_user_mappings</node>
             <node x="" y="">e589d5fd-86a0-49b1-b9d8-345dd9cc31fe.table:staff-hacker_development.pg_catalog.pg_ts_config</node>
             <node x="" y="">e589d5fd-86a0-49b1-b9d8-345dd9cc31fe.table:staff-hacker_development.pg_catalog.pg_stat_xact_all_tables</node>
-            <node x="" y="">e589d5fd-86a0-49b1-b9d8-345dd9cc31fe.table:staff-hacker_development.pg_catalog.pg_seclabels</node>
             <node x="" y="">e589d5fd-86a0-49b1-b9d8-345dd9cc31fe.table:staff-hacker_development.pg_catalog.pg_stat_database</node>
+            <node x="" y="">e589d5fd-86a0-49b1-b9d8-345dd9cc31fe.table:staff-hacker_development.pg_catalog.pg_seclabels</node>
             <node x="" y="">e589d5fd-86a0-49b1-b9d8-345dd9cc31fe.table:staff-hacker_development.pg_catalog.pg_ts_config_map</node>
             <node x="" y="">e589d5fd-86a0-49b1-b9d8-345dd9cc31fe.table:staff-hacker_development.pg_catalog.pg_statio_all_tables</node>
             <node x="" y="">e589d5fd-86a0-49b1-b9d8-345dd9cc31fe.table:staff-hacker_development.pg_catalog.pg_timezone_names</node>
@@ -1074,10 +1074,10 @@
             <node x="" y="">e589d5fd-86a0-49b1-b9d8-345dd9cc31fe.table:staff-hacker_development.pg_catalog.pg_proc</node>
             <node x="" y="">e589d5fd-86a0-49b1-b9d8-345dd9cc31fe.table:staff-hacker_development.pg_catalog.pg_locks</node>
             <node x="" y="">e589d5fd-86a0-49b1-b9d8-345dd9cc31fe.table:staff-hacker_development.pg_catalog.pg_stat_user_tables</node>
-            <node x="" y="">e589d5fd-86a0-49b1-b9d8-345dd9cc31fe.table:staff-hacker_development.pg_catalog.pg_statistic</node>
             <node x="" y="">e589d5fd-86a0-49b1-b9d8-345dd9cc31fe.table:staff-hacker_development.pg_catalog.pg_attribute</node>
-            <node x="" y="">e589d5fd-86a0-49b1-b9d8-345dd9cc31fe.table:staff-hacker_development.pg_catalog.pg_pltemplate</node>
+            <node x="" y="">e589d5fd-86a0-49b1-b9d8-345dd9cc31fe.table:staff-hacker_development.pg_catalog.pg_statistic</node>
             <node x="" y="">e589d5fd-86a0-49b1-b9d8-345dd9cc31fe.table:staff-hacker_development.pg_catalog.pg_ts_dict</node>
+            <node x="" y="">e589d5fd-86a0-49b1-b9d8-345dd9cc31fe.table:staff-hacker_development.pg_catalog.pg_pltemplate</node>
             <node x="" y="">e589d5fd-86a0-49b1-b9d8-345dd9cc31fe.table:staff-hacker_development.pg_catalog.pg_stat_sys_indexes</node>
             <node x="" y="">e589d5fd-86a0-49b1-b9d8-345dd9cc31fe.table:staff-hacker_development.pg_catalog.pg_largeobject_metadata</node>
             <node x="" y="">e589d5fd-86a0-49b1-b9d8-345dd9cc31fe.table:staff-hacker_development.pg_catalog.pg_statio_user_indexes</node>
@@ -1145,8 +1145,8 @@
             <node x="" y="">e589d5fd-86a0-49b1-b9d8-345dd9cc31fe.table:staff-hacker_development.public.ratings</node>
             <node x="" y="">e589d5fd-86a0-49b1-b9d8-345dd9cc31fe.table:staff-hacker_development.pg_catalog.pg_database</node>
             <node x="" y="">e589d5fd-86a0-49b1-b9d8-345dd9cc31fe.table:staff-hacker_development.pg_catalog.pg_statio_user_sequences</node>
-            <node x="" y="">e589d5fd-86a0-49b1-b9d8-345dd9cc31fe.table:staff-hacker_development.pg_catalog.pg_stat_all_tables</node>
             <node x="" y="">e589d5fd-86a0-49b1-b9d8-345dd9cc31fe.table:staff-hacker_development.pg_catalog.pg_description</node>
+            <node x="" y="">e589d5fd-86a0-49b1-b9d8-345dd9cc31fe.table:staff-hacker_development.pg_catalog.pg_stat_all_tables</node>
             <node x="" y="">e589d5fd-86a0-49b1-b9d8-345dd9cc31fe.table:staff-hacker_development.pg_catalog.pg_depend</node>
             <node x="" y="">e589d5fd-86a0-49b1-b9d8-345dd9cc31fe.table:staff-hacker_development.pg_catalog.pg_namespace</node>
           </nodes>
@@ -1330,13 +1330,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/app/scripts/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1650" max-vertical-offset="2475">
-          <caret line="128" column="71" selection-start-line="128" selection-start-column="71" selection-end-line="128" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/routes.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1200">
@@ -1362,7 +1355,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="240" max-vertical-offset="345">
           <caret line="16" column="22" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1370,7 +1362,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="1410">
           <caret line="7" column="28" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="28" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1378,7 +1369,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="7680">
           <caret line="175" column="36" selection-start-line="175" selection-start-column="36" selection-end-line="175" selection-end-column="36" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1386,7 +1376,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="75" max-vertical-offset="750">
           <caret line="42" column="3" selection-start-line="5" selection-start-column="2" selection-end-line="42" selection-end-column="3" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1416,7 +1405,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/client/app/views/recruiter-rating.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.125" vertical-offset="45" max-vertical-offset="1380">
+        <state vertical-scroll-proportion="0.0" vertical-offset="45" max-vertical-offset="1380">
           <caret line="24" column="30" selection-start-line="24" selection-start-column="30" selection-end-line="24" selection-end-column="30" />
           <folding />
         </state>
@@ -1424,7 +1413,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/client/app/views/search.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-20.0" vertical-offset="225" max-vertical-offset="990">
+        <state vertical-scroll-proportion="0.0" vertical-offset="225" max-vertical-offset="990">
           <caret line="47" column="38" selection-start-line="47" selection-start-column="38" selection-end-line="47" selection-end-column="38" />
           <folding />
         </state>
@@ -1464,8 +1453,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/db/seeds.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.80922097" vertical-offset="10936" max-vertical-offset="11565">
+        <state vertical-scroll-proportion="0.0" vertical-offset="10900" max-vertical-offset="11565">
           <caret line="763" column="45" selection-start-line="763" selection-start-column="45" selection-end-line="763" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/app/scripts/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.53271025" vertical-offset="1248" max-vertical-offset="2565">
+          <caret line="106" column="15" selection-start-line="106" selection-start-column="15" selection-end-line="106" selection-end-column="15" />
           <folding />
         </state>
       </provider>
