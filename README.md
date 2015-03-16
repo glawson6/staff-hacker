@@ -2,13 +2,13 @@
 
 ##Overview
 
-staffHacker is a web application that allows hiring managers to rate and comment on 
-recruiter they've worked with. It's like a Yelp page for IT recruiting. 
+StaffHacker is a web application that allows hiring managers to rate and comment on 
+recruiter they've worked with. In many ways, it's like a Yelp page for IT recruiting. 
 
 The app allows users to log in and search recruiters by name or company. The user can
-read all the comments and ratings from previous users and write their own comments and rating.
+read all comments and ratings from previous users, as well as write their own comments and apply a rating.
 
-staffHacker is my Rails/AngularJS project created for the General Assembly Web Development Immersive program in Atlanta, GA. 
+StaffHacker is a Rails/AngularJS project created for the General Assembly Web Development Immersive program in Atlanta, GA. 
 
 ##Developers
 
@@ -20,10 +20,18 @@ staffHacker is my Rails/AngularJS project created for the General Assembly Web D
 ##Technologies Used
 * Rails 4.2.0
 * Ruby 2.1.2
+* JavaScript
+* JQuery
+* AngularJS
+* Easel JS
 * HTML5
 * CSS3
-* PostgreSQL 
-* AngularJS
+* Bootstrap
+* Animate
+* Yeoman
+* Bower
+* PostgreSQL
+* Active Record
 * Authentication & Authorization from scratch with [bcrypt-ruby](https://github.com/codahale/bcrypt-ruby)
 * Responsive Design
 * Heroku deployment
@@ -32,7 +40,7 @@ staffHacker is my Rails/AngularJS project created for the General Assembly Web D
 * [Site on Heroku](https://staff-hacker.herokuapp.com)
 * [Trello board](https://trello.com/b/rCNvyCEC/staff-hack)
 
-##Wireframe
+##Wireframes
 * Recruiter Rating Page: 
 ![Recruiter Rating Page](https://trello-attachments.s3.amazonaws.com/54fb52c459e572785ed7b175/3264x2448/da36a3a32cb5f0e28b04e55778de5234/IMG_1242.JPG)
 * Sign Up Page:
