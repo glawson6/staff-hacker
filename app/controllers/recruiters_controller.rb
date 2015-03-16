@@ -22,7 +22,7 @@ class RecruitersController < ApplicationController
     render json: { first_name: @recruiter.first_name,  last_name:
                    @recruiter.last_name, company_id: @recruiter.company.name,
                    image_url: @recruiter.image_url, ratings: @recruiter.ratings,
-                   average: recruiter_rating_average(@recruiter.id) }
+                   average: recruiter_rating_average(@recruiter.id), website: @recruiter.company.website }
   end
 
   # POST /recruiters
