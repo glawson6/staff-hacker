@@ -274,7 +274,6 @@ section {
     -o-animation-delay: 1s;
 }
 
-
 /*SIGN IN/UP PAGES*/
 
 .form-signin.sign-in  {
@@ -325,9 +324,62 @@ section {
   margin-right: 20px;
 }
 
-.recruiter-page {
+/*RECRUITER RATING PAGE*/
+
+.container.form-signin.recruiter-rating {
   margin-top: 85px;
 }
+
+.media-object.recruiter-rating {
+  height: 200px;
+  width: 200px;
+}
+
+#rating-text-area {
+  width: 100%;
+}
+
+#create-rating-button {
+  position: relative;
+  left: 82%;
+  margin: 10px;
+}
+
+table {
+  position: center;
+  width: 80%;
+  color: #2F4F4F;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+table, th, td {
+  border: 1px solid #A9A9A9;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  background-color: #337ab7;
+  color: white;
+  border: none;
+  font-size: 18px;
+}
+
+table tr th:nth-child(2) {
+  width: 100%;
+}
+
+td {
+  font-style: italic;
+  font-weight: normal;
+}
+
+/*FOOTER*/
 
 .footer {
   padding: 60px 0;
