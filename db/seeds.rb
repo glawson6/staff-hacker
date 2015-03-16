@@ -37,27 +37,27 @@ Company.destroy_all
 
 apex_systems = Company.find_or_create_by({
   name: 'Apex Systems, Inc',
-  website: 'www.apexsystemsinc.com'})
+  website: 'http://www.apexsystemsinc.com/'})
 
 diversant = Company.find_or_create_by({
   name: 'Diversant LLC',
-  website: 'www.diversant.com'})
+  website: 'http://www.diversant.com'})
 
 hunter_technical_resources = Company.find_or_create_by({
   name: 'Hunter Technical Resources',
-  website: 'www.htrjobs.com'})
+  website: 'http://www.htrjobs.com'})
 
 insight_global = Company.find_or_create_by({
   name: 'Insight Global',
-  website: 'www.insightglobal.net'})
+  website: 'http://www.insightglobal.net'})
 
 matrix_resources = Company.find_or_create_by({
   name: 'Matrix Resources',
-  website: 'matrixresources.com'})
+  website: 'http://matrixresources.com'})
 
 tek_systems = Company.find_or_create_by({
   name: 'TEKsystems',
-  website: 'www.teksystems.com'})
+  website: 'http://www.teksystems.com'})
 
 recruiters_for_apex_systems = [
   {
