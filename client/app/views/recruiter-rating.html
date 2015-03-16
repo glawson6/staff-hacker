@@ -69,7 +69,8 @@
 
                <tbody ng-repeat="rating in recruiter.ratings">
                 <tr>
-                  <td>{{rating.rate}}</td>
+                  <td><canvas id="starCanvas{{rating.rate}}" draw-stars-js options="{average: rating.rate, radius: 10}"
+                    width="120" height="25"></canvas></td>
                   <td>"{{rating.comments}}"</td>
                 </tr>
               </tbody>

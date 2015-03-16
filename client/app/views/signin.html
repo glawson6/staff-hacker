@@ -1,18 +1,17 @@
 <!-- SIGN IN PAGE  -->
+	<div class="container">
+		<center>
+			<form class="form-signin sign-in">
+			  <h2 class="form-signin-heading">Sign In</h2>
 
-<div class="container">
-	<center>
-		<form class="form-signin sign-in">
-		  <h2 class="form-signin-heading">Sign In</h2>
+			  <label for="inputEmail" class="sr-only">Email address</label>
+			  <input placeholder="Email" type="email" id="inputEmail" class="form-control" required="" ng-model="email" autofocus="">
 
-		  <label for="inputEmail" class="sr-only">Email address</label>
-		  <input placeholder="Email" type="email" id="inputEmail" class="form-control" required="" ng-model="email" autofocus="">
+				<label for="inputPassword" class="sr-only">Password</label>
+			  <input type="password" id="inputPassword" class="form-control" placeholder="Password" required="" ng-model="password">
 
-			<label for="inputPassword" class="sr-only">Password</label>
-		  <input type="password" id="inputPassword" class="form-control" placeholder="Password" required="" ng-model="password">
-
-			<button class="btn btn-lg btn-primary btn-block register-btn" ng-click="logUserIn()">Sign in</button>
-		
-		</form>
-	</center>
-</div>
+				<button class="btn btn-lg btn-primary btn-block register-btn" ng-click="logUserIn()">Sign in</button>
+			
+			</form>
+		</center>
+	</div>
