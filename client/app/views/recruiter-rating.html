@@ -1,5 +1,5 @@
 <div class="container form-signin recruiter-rating" ng-controller="RecruiterCtrl">
-      
+
       <div class="media">
       <!-- THE HEADER WITH PICTURE AND STARS -->
         <div class="row">
@@ -19,7 +19,8 @@
           </div>
 
           <div class="col-md-6">
-            STAR RATING GOES HERE
+            <canvas id="starCanvas{{recruiter.id}}" draw-stars-js options="{average: recruiter.average, radius: 50}"
+                    width="550" height="125"></canvas>
           </div>
         </div>
 
@@ -35,20 +36,20 @@
             </label>
             <label class="radio-inline">
               <input class="radio-selector" type="radio" name="inlineRadioOptions" id="inlineRadio3" ng-model="rate" value="3"> 3
-            </label> 
+            </label>
             <label class="radio-inline">
               <input class="radio-selector" type="radio" name="inlineRadioOptions" id="inlineRadio4" ng-model="rate" value="4"> 4
-            </label>  
+            </label>
             <label class="radio-inline">
               <input class="radio-selector" type="radio" name="inlineRadioOptions" id="inlineRadio5" ng-model="rate" value="5"> 5
-            </label>               
-            
-            <form> 
+            </label>
+
+            <form>
                 <br>
-              <textarea id="rating-text-area" class="form-control" rows="5" id="comments" 
+              <textarea id="rating-text-area" class="form-control" rows="5" id="comments"
               placeholder="Tell us your experience" required="" ng-model="comments"></textarea>
 
-              <button id="create-rating-button" class="btn btn-lg btn-primary" 
+              <button id="create-rating-button" class="btn btn-lg btn-primary"
                 ng-click="createRating()">Add Rating</button>
             </form>
           </div>
@@ -62,19 +63,19 @@
               <thead>
                 <tr>
                   <th>Rating</th>
-                  <th>Comments</th>      
+                  <th>Comments</th>
                 </tr>
               </thead>
 
                <tbody ng-repeat="rating in recruiter.ratings">
                 <tr>
                   <td>{{rating.rate}}</td>
-                  <td>"{{rating.comments}}"</td>         
+                  <td>"{{rating.comments}}"</td>
                 </tr>
               </tbody>
-            </table>          
+            </table>
           </div>
-        </div>  
+        </div>
       </div>
     </div>
   </div>
