@@ -8,7 +8,7 @@ recruiter they've worked with. In many ways, it's like a Yelp page for IT recrui
 The app allows users to log in and search recruiters by name or company. The user can
 read all comments and ratings from previous users, as well as write their own comments and apply a rating.
 
-StaffHacker is a Rails/AngularJS project created for the General Assembly Web Development Immersive program in Atlanta, GA. 
+StaffHacker is a Rails/AngularJS project created for General Assembly's Web Development Immersive program in Atlanta, GA. 
 
 ##Developers
 
